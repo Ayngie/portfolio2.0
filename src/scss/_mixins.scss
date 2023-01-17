@@ -1,0 +1,53 @@
+@mixin heart {
+    /* -------  Heart animation --------- */
+    .heart-container {
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heart {
+        position: relative;
+        height: 70px;
+        width: 70px;
+        transform: rotate(45deg);
+        background-color: rgb(255, 0, 111);
+        animation: heart 1.5s infinite;
+    }
+    .heart::before,
+    .heart::after {
+        position: absolute;
+        content: ""; /*Varför?*/
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background-color: rgb(255, 0, 111);
+    }
+    .heart::before {
+        left: -35px;
+    }
+    .heart::after {
+        top: -35px;
+        left: 0px; /*Denna rad behövdes (annars blev det skevt) - OBS! Varför?*/
+    }
+    @keyframes heart {
+        0% {
+            transform: rotate(45deg) scale(0.8);
+        }
+        5% {
+            transform: rotate(45deg) scale(0.9);
+        }
+        10% {
+            transform: rotate(45deg) scale(0.8);
+        }
+        15% {
+            transform: rotate(45deg) scale(1);
+        }
+        50% {
+            transform: rotate(45deg) scale(0.8);
+        }
+        100% {
+            transform: rotate(45deg) scale(0.8);
+        }
+    }
+}

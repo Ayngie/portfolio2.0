@@ -1,0 +1,14 @@
+@use "mixins";
+
+/*-------------------------------------- Mobile first ------------------------------------*/
+body {
+    margin: 0;
+    .main-container {
+        @include mixins.heart;
+    }
+}
+
+/*-------------------------------------- Desktop ------------------------------------*/
+@media screen and (min-width: 1000px) {
+
+}
