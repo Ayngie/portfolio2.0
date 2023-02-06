@@ -106,8 +106,12 @@ body {
                             cursor: pointer;
 
                             &:hover {
-                                font-size: 1.05rem; //? Makes whole row "shake"
-                                // shadow?
+                                // border-bottom: 1px solid rgba(255, 105, 180, 1); //? Makes whole row "shake"
+                                background-color: pink;
+                                border-radius: 5px;
+                            
+                                //font-size: 1.1rem; //? Makes whole row "shake"
+                                // font shadow?
                             }
                             &:active {
                                 color: rgb(255, 0, 111);
