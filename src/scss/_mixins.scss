@@ -1,11 +1,10 @@
 @mixin heart {
     /* -------  Heart animation --------- */
-    .heart-container {
-        height: 30vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .heart {
         position: relative;
         height: 70px;
@@ -14,8 +13,7 @@
         background-color: rgb(255, 0, 111);
         animation: heart 1.5s infinite;
     }
-    .heart::before,
-    .heart::after {
+    .heart::before, .heart::after {
         position: absolute;
         content: ""; /*Varför?*/
         height: 70px;
@@ -50,4 +48,6 @@
             transform: rotate(45deg) scale(0.8);
         }
     }
+    /* ------------------------------------- */
+    
 }
