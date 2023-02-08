@@ -1,5 +1,17 @@
+/* -------------------------------- BASIC MIXINS -------------------------------- */
+
+@mixin themeColor {
+    background-color: rgb(255, 0, 111);
+}
+
+@mixin contrastColor {
+    background-color: rgb(255, 168, 216);
+}
+
+/* -------------------------------- ANIMATIONS -------------------------------- */
+
+/* -------  Heart animation --------- */
 @mixin heart {
-    /* -------  Heart animation --------- */
     height: 30vh;
     display: flex;
     justify-content: center;
@@ -10,8 +22,8 @@
         height: 70px;
         width: 70px;
         transform: rotate(45deg);
-        background-color: rgb(255, 0, 111);
         animation: heart 1.5s infinite;
+        @include themeColor;
     }
     .heart::before, .heart::after {
         position: absolute;
@@ -19,15 +31,16 @@
         height: 70px;
         width: 70px;
         border-radius: 50%;
-        background-color: rgb(255, 0, 111);
+        @include themeColor;
     }
     .heart::before {
         left: -35px;
     }
     .heart::after {
         top: -35px;
-        left: 0px; /*Denna rad behövdes (annars blev det skevt) - OBS! Varför?*/
+        left: 0px; 
     }
+    
     @keyframes heart {
         0% {
             transform: rotate(45deg) scale(0.8);
@@ -48,6 +61,5 @@
             transform: rotate(45deg) scale(0.8);
         }
     }
-    /* ------------------------------------- */
-    
 }
+/* ------------------------------------- */
