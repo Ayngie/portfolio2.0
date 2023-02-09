@@ -45,10 +45,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#About me"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#aboutContainer"
                   >About</a
                 >
-                <a class="nav-link" href="">Projects</a>
+                <a class="nav-link" href="#projectsContainer">Projects</a>
                 <a class="nav-link" href="#contact">Contact</a>
               </div>
             </div>
@@ -69,11 +72,29 @@
           </div>
         </section>
 
-        <section class="mainContainer"></section>
+        <section class="mainContainer">
+          <div
+            id="helloContainer"
+            class="shadow p-3 mb-5 bg-body rounded"></div>
+          <div
+            id="aboutContainer"
+            class="shadow p-3 mb-5 bg-body rounded"></div>
+          <div id="techStack"></div>
+          <div
+            id="projectsContainer"
+            class="shadow p-3 mb-5 bg-body rounded"></div>
+          <div
+            id="contactContainer"
+            class="shadow p-3 mb-5 bg-body rounded"></div>
+        </section>
       </main>
 
       <footer id="contact">
-        <p>Angelica Reuterswärd, Front-end developer</p>
+        <div>
+          <a class="nav-link active" aria-current="page" href="#"
+            >Angelica Reuterswärd, Front-end developer</a
+          >
+        </div>
         <ul>
           <li class="hoverHeart">
             <a
