@@ -1,21 +1,15 @@
 function createHtml() {
+  createHelloContainer();
+  createAboutContainer();
+  createProjectsContainer();
+  createContactContainer();
+}
+
+function createHelloContainer() {
   let helloContainer: HTMLDivElement = document.getElementById(
     "helloContainer"
   ) as HTMLDivElement;
-  let aboutContainer: HTMLDivElement = document.getElementById(
-    "aboutContainer"
-  ) as HTMLDivElement;
-  // let techStackContainer: HTMLDivElement = document.getElementById(
-  //   "techStack"
-  // ) as HTMLDivElement;
-  let projectsContainer: HTMLDivElement = document.getElementById(
-    "projectsContainer"
-  ) as HTMLDivElement;
-  let contactContainer: HTMLDivElement = document.getElementById(
-    "contactContainer"
-  ) as HTMLDivElement;
 
-  //helloContainer
   let helloHeading = document.createElement("h4");
   helloHeading.innerHTML = "Hi! I'm Angie!";
 
@@ -44,16 +38,13 @@ function createHtml() {
   helloContainer.appendChild(helloParagraph1);
   helloContainer.appendChild(helloParagraph2);
   helloContainer.appendChild(profilePic);
+}
 
-  //techStackContainer
-  // let techStackPic = document.createElement("img") as HTMLImageElement;
-  // techStackPic.setAttribute("src", "/src/assets/busybee.JPG"); //VARFÖR BRUTEN BILD?!
-  // techStackPic.setAttribute("alt", "Tech stack");
-  // techStackPic.classList.add("techStack");
+function createAboutContainer() {
+  let aboutContainer: HTMLDivElement = document.getElementById(
+    "aboutContainer"
+  ) as HTMLDivElement;
 
-  // techStackContainer.appendChild(techStackPic);
-
-  //aboutContainer
   let aboutHeading = document.createElement("h4");
   aboutHeading.innerHTML = "About me";
 
@@ -87,16 +78,26 @@ function createHtml() {
 
   aboutContainer.appendChild(aboutHeading);
   aboutContainer.appendChild(container);
+}
 
-  //projectsContainer
+function createProjectsContainer() {
+  let projectsContainer: HTMLDivElement = document.getElementById(
+    "projectsContainer"
+  ) as HTMLDivElement;
+
   let projectsHeading = document.createElement("h4");
   projectsHeading.innerHTML = "My projects";
   let projParagraph1 = document.createElement("p");
   projParagraph1.innerHTML = "Coming soon...";
   projectsContainer.appendChild(projectsHeading);
   projectsContainer.appendChild(projParagraph1);
+}
 
-  //contactContainer
+function createContactContainer() {
+  let contactContainer: HTMLDivElement = document.getElementById(
+    "contactContainer"
+  ) as HTMLDivElement;
+
   let contactsHeading = document.createElement("h4");
   contactsHeading.innerHTML = "Contact";
 
@@ -113,3 +114,14 @@ function createHtml() {
 }
 
 createHtml();
+
+// let techStackContainer: HTMLDivElement = document.getElementById(
+//   "techStackContainer"
+// ) as HTMLDivElement;
+//techStackContainer;
+// let techStackPic = document.createElement("img") as HTMLImageElement;
+// techStackPic.src =
+//   "https://previews.dropbox.com/p/thumb/ABxthkRom5mrOLVdfVMESDf89SPo7EBHjjSse8_HHSK6K2ZMqXia4Eb_Zg8NpJrm_RdZiC1wnrERWaZxRpst5eD3jXVzK-ch8yGqtazA30bBPpwxsA9mU4U3zZ2bz2xkC09ZsGn-unL6X0WfAs3EENR1SBlinMFlWZ_iXHTLXOZsrTHXDxDLYes4V2rQlWT4o__hIu31qy3TQdZlS0Vf6mPu34lv6Vt6byYYAWAOsLmnqrzFM-QXZF_my2NWW42BJoe1Izyspe5YqLm85wnvWX_KPQKECi-8HlAu7TDyAbRkuaLTwkm3EMRVC_ejd-6sBmd6k_zQ2FQHUn0eoGq9to9IBluoecfPLE29Ja8wsZAwmMCQu-b_J2uC8-QnlvK7Kkg/p.jpeg";
+// techStackPic.alt = "Tech stack / Turtle";
+// techStackPic.classList.add("techStackImage");
+// techStackContainer.appendChild(techStackPic);
