@@ -3,7 +3,7 @@
 /*-------------------------------------- Mobile first ------------------------------------*/
 html {
     
-    //@include mixins.themeColor; // ??? Hiss eller Diss? 
+    @include mixins.themeColor; // ??? Hiss eller Diss? 
  
     body {
         margin: 0;
@@ -104,6 +104,11 @@ html {
                                 width: 40%;
                                 border-radius: 50%;
                                 
+                                &:hover {
+                                    width: 42% !important;
+                                    transform: rotate(-5deg);
+                                    margin: 22.3px;
+                                }
                             }
                         }
                         #helloAboutParagraphs {
