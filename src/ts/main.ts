@@ -10,6 +10,7 @@ function createHelloContainer() {
     "helloContainer"
   ) as HTMLDivElement;
 
+  /* TEXT */
   let helloHeading = document.createElement("h4");
   helloHeading.innerHTML = "Hi! I'm Angie!";
 
@@ -28,16 +29,22 @@ function createHelloContainer() {
   helloParagraph2.appendChild(span2);
   helloParagraph2.appendChild(span3);
 
-  let profilePic = document.createElement("img");
-  profilePic.src =
-    "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
-  profilePic.alt = "Profile picture";
-  profilePic.classList.add("profilePic");
+  /* IMAGE */
+  let profileImgBox = document.createElement("div");
+  profileImgBox.classList.add("profileImgBox");
 
+  let profileImg = document.createElement("img");
+  profileImg.src =
+    "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
+  profileImg.alt = "Profile picture";
+  profileImg.classList.add("profileImg");
+  profileImgBox.appendChild(profileImg);
+
+  /* HTML */
   helloContainer.appendChild(helloHeading);
   helloContainer.appendChild(helloParagraph1);
   helloContainer.appendChild(helloParagraph2);
-  helloContainer.appendChild(profilePic);
+  helloContainer.appendChild(profileImgBox);
 }
 
 function createAboutContainer() {
@@ -45,18 +52,49 @@ function createAboutContainer() {
     "aboutContainer"
   ) as HTMLDivElement;
 
+  /* TEXT */
   let aboutHeading = document.createElement("h4");
   aboutHeading.innerHTML = "About me";
 
   let container = document.createElement("div");
 
-  let relevantEducation = document.createElement("div");
-  relevantEducation.classList.add(
-    "shadow",
+  //Tech Stack
+  let techStack = document.createElement("div");
+  techStack.classList.add(
+    "shadow-sm",
     "p-3",
     "mb-5",
     "bg-body",
-    "rounded"
+    "rounded",
+    "techStackBox"
+  );
+  let techHeading = document.createElement("h5");
+  techHeading.innerHTML = "Tech Stack";
+  let techParagraph1 = document.createElement("p");
+  techParagraph1.innerHTML = "Coming soon...";
+  let techImgBox = document.createElement("div");
+  techImgBox.classList.add("techImgBox");
+  let techImg = document.createElement("img");
+  techImg.src =
+    "https://previews.dropbox.com/p/thumb/ABxthkRom5mrOLVdfVMESDf89SPo7EBHjjSse8_HHSK6K2ZMqXia4Eb_Zg8NpJrm_RdZiC1wnrERWaZxRpst5eD3jXVzK-ch8yGqtazA30bBPpwxsA9mU4U3zZ2bz2xkC09ZsGn-unL6X0WfAs3EENR1SBlinMFlWZ_iXHTLXOZsrTHXDxDLYes4V2rQlWT4o__hIu31qy3TQdZlS0Vf6mPu34lv6Vt6byYYAWAOsLmnqrzFM-QXZF_my2NWW42BJoe1Izyspe5YqLm85wnvWX_KPQKECi-8HlAu7TDyAbRkuaLTwkm3EMRVC_ejd-6sBmd6k_zQ2FQHUn0eoGq9to9IBluoecfPLE29Ja8wsZAwmMCQu-b_J2uC8-QnlvK7Kkg/p.jpeg";
+  techImg.alt = "Tech stack / Turtle";
+  techImg.classList.add("techImg");
+  techImgBox.appendChild(techImg);
+
+  techStack.appendChild(techHeading);
+  techStack.appendChild(techParagraph1);
+  techStack.appendChild(techImgBox);
+  container.appendChild(techStack);
+
+  //Relevant Education
+  let relevantEducation = document.createElement("div");
+  relevantEducation.classList.add(
+    "shadow-sm",
+    "p-3",
+    "mb-5",
+    "bg-body",
+    "rounded",
+    "relevantEducationBox"
   );
   let eduHeading = document.createElement("h5");
   eduHeading.innerHTML = "Relevant education";
@@ -66,16 +104,26 @@ function createAboutContainer() {
   relevantEducation.appendChild(eduParagraph1);
   container.appendChild(relevantEducation);
 
+  //Work Experience
   let workExperience = document.createElement("div");
-  workExperience.classList.add("shadow", "p-3", "mb-5", "bg-body", "rounded");
+  workExperience.classList.add(
+    "shadow-sm",
+    "p-3",
+    "mb-5",
+    "bg-body",
+    "rounded",
+    "workExperienceBox"
+  );
   let workHeading = document.createElement("h5");
   workHeading.innerHTML = "Work experience";
   let workParagraph1 = document.createElement("p");
-  workParagraph1.innerHTML = "Coming soon...";
+  workParagraph1.innerHTML =
+    "I have run a private osteopathic clinic for over ten years, where i've been working with people to help them solve 'bugs' in other systems ;)";
   workExperience.appendChild(workHeading);
   workExperience.appendChild(workParagraph1);
   container.appendChild(workExperience);
 
+  /* HTML */
   aboutContainer.appendChild(aboutHeading);
   aboutContainer.appendChild(container);
 }
@@ -95,7 +143,7 @@ function createProjectsContainer() {
 
 function createContactContainer() {
   let contactContainer: HTMLDivElement = document.getElementById(
-    "contactContainer"
+    "contactContainerJS"
   ) as HTMLDivElement;
 
   let contactsHeading = document.createElement("h4");
@@ -106,7 +154,7 @@ function createContactContainer() {
     "I am currently looking for an internship for fall of 2023. Feel free to contact me if you have openings!";
 
   let contactParagraph2 = document.createElement("p");
-  contactParagraph2.innerHTML = "Find me via my socials below!";
+  contactParagraph2.innerHTML = "Click an icon to get in touch with me!";
 
   contactContainer.appendChild(contactsHeading);
   contactContainer.appendChild(contactParagraph1);
@@ -114,14 +162,3 @@ function createContactContainer() {
 }
 
 createHtml();
-
-// let techStackContainer: HTMLDivElement = document.getElementById(
-//   "techStackContainer"
-// ) as HTMLDivElement;
-//techStackContainer;
-// let techStackPic = document.createElement("img") as HTMLImageElement;
-// techStackPic.src =
-//   "https://previews.dropbox.com/p/thumb/ABxthkRom5mrOLVdfVMESDf89SPo7EBHjjSse8_HHSK6K2ZMqXia4Eb_Zg8NpJrm_RdZiC1wnrERWaZxRpst5eD3jXVzK-ch8yGqtazA30bBPpwxsA9mU4U3zZ2bz2xkC09ZsGn-unL6X0WfAs3EENR1SBlinMFlWZ_iXHTLXOZsrTHXDxDLYes4V2rQlWT4o__hIu31qy3TQdZlS0Vf6mPu34lv6Vt6byYYAWAOsLmnqrzFM-QXZF_my2NWW42BJoe1Izyspe5YqLm85wnvWX_KPQKECi-8HlAu7TDyAbRkuaLTwkm3EMRVC_ejd-6sBmd6k_zQ2FQHUn0eoGq9to9IBluoecfPLE29Ja8wsZAwmMCQu-b_J2uC8-QnlvK7Kkg/p.jpeg";
-// techStackPic.alt = "Tech stack / Turtle";
-// techStackPic.classList.add("techStackImage");
-// techStackContainer.appendChild(techStackPic);
