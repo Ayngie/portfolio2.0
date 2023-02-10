@@ -1,11 +1,11 @@
 function createHtml() {
-  createHelloContainer();
-  createAboutContainer();
-  createProjectsContainer();
-  createContactContainer();
+  helloContainer();
+  aboutContainer();
+  projectsContainer();
+  contactContainer();
 }
 
-function createHelloContainer() {
+function helloContainer() {
   let helloContainer: HTMLDivElement = document.getElementById(
     "helloContainer"
   ) as HTMLDivElement;
@@ -47,7 +47,7 @@ function createHelloContainer() {
   helloContainer.appendChild(profileImgBox);
 }
 
-function createAboutContainer() {
+function aboutContainer() {
   let aboutContainer: HTMLDivElement = document.getElementById(
     "aboutContainer"
   ) as HTMLDivElement;
@@ -57,32 +57,26 @@ function createAboutContainer() {
   aboutHeading.innerHTML = "About me";
 
   let container = document.createElement("div");
+  container.classList.add("aboutBoxes");
 
   //Tech Stack
   let techStack = document.createElement("div");
-  techStack.classList.add(
-    "shadow-sm",
-    "p-3",
-    "mb-5",
-    "bg-body",
-    "rounded",
-    "techStackBox"
-  );
+  techStack.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
+  techStack.id = "techStackBox";
+
   let techHeading = document.createElement("h5");
   techHeading.innerHTML = "Tech Stack";
-  let techParagraph1 = document.createElement("p");
-  techParagraph1.innerHTML = "Coming soon...";
+
   let techImgBox = document.createElement("div");
   techImgBox.classList.add("techImgBox");
   let techImg = document.createElement("img");
   techImg.src =
-    "https://previews.dropbox.com/p/thumb/ABxthkRom5mrOLVdfVMESDf89SPo7EBHjjSse8_HHSK6K2ZMqXia4Eb_Zg8NpJrm_RdZiC1wnrERWaZxRpst5eD3jXVzK-ch8yGqtazA30bBPpwxsA9mU4U3zZ2bz2xkC09ZsGn-unL6X0WfAs3EENR1SBlinMFlWZ_iXHTLXOZsrTHXDxDLYes4V2rQlWT4o__hIu31qy3TQdZlS0Vf6mPu34lv6Vt6byYYAWAOsLmnqrzFM-QXZF_my2NWW42BJoe1Izyspe5YqLm85wnvWX_KPQKECi-8HlAu7TDyAbRkuaLTwkm3EMRVC_ejd-6sBmd6k_zQ2FQHUn0eoGq9to9IBluoecfPLE29Ja8wsZAwmMCQu-b_J2uC8-QnlvK7Kkg/p.jpeg";
+    "https://previews.dropbox.com/p/thumb/AByejo6LZKZ2uVVtZ45Mt3Zt7jqjuO5KyLM5C1jv4C0d0ANAIcrOCF_68axgpm-AZdbiC3kwANAdHy8NcOp2CIbhRsN4PBrB4jfVassgLWFVx0PWtcNlZ18gZU2w2VjyALO6RVI6ECxHS1t3Cc0Sb-JcfURhzIVKgqVt6gHdtuGFsXYu5pvMyZBsr2bx9Pe0u9xTKqyitnKH4cJYVmaPkIOEWz_lASFmFc-6W_L7UDitH19vBhtCKbGRHgds-ftUqNpqKmg1BkBnKOxJHLY7XH2yQS06Wl-PhvyYOnFmpLwsIwFKjuDoefNuZL9laOJ8MgnHt60jNX5JhKWW0XTEcT50mlx7ziAnS7EWE3jnOUQFCQ4Vnb0PSlg1SlfFgCq24mP555BHFdgiq4tZNQseIYbuyLEmGTP8wCFMJD37S-D6wZxCtO9rUTkAW7mUFvgz4T8/p.jpeg";
   techImg.alt = "Tech stack / Turtle";
   techImg.classList.add("techImg");
   techImgBox.appendChild(techImg);
 
   techStack.appendChild(techHeading);
-  techStack.appendChild(techParagraph1);
   techStack.appendChild(techImgBox);
   container.appendChild(techStack);
 
@@ -93,15 +87,44 @@ function createAboutContainer() {
     "p-3",
     "mb-5",
     "bg-body",
-    "rounded",
-    "relevantEducationBox"
+    "rounded"
   );
+  relevantEducation.id = "relevantEducationBox";
+
   let eduHeading = document.createElement("h5");
   eduHeading.innerHTML = "Relevant education";
-  let eduParagraph1 = document.createElement("p");
-  eduParagraph1.innerHTML = "Coming soon...";
+  let educationsBox = document.createElement("div");
+  educationsBox.classList.add("educationsBox");
+
+  let medieinstitutet = document.createElement("p");
+  let textBeforeLink = document.createElement("span");
+  textBeforeLink.innerHTML = "Front-end developer på ";
+  let MILink = document.createElement("a");
+  MILink.href = "https://medieinstitutet.se/utbildningar/front-end-developer/";
+  MILink.target = "_blank";
+  MILink.innerHTML = "Medieinstitutet";
+  let textAfterLink = document.createElement("span");
+  textAfterLink.innerHTML = " Stockholm (2022-2024)";
+  MILink.id = "medieinstitutetURL";
+
+  let programmering1 = document.createElement("p");
+  programmering1.innerHTML =
+    "Programmering 1, Jensen Komvux (11/2020 - 01/2021)";
+
+  let webbutveckling1 = document.createElement("p");
+  webbutveckling1.innerHTML =
+    "Webbutveckling 1, Jensen Komvux (09/2020 - 11/2020)";
+
+  medieinstitutet.appendChild(textBeforeLink);
+  medieinstitutet.appendChild(MILink);
+  medieinstitutet.appendChild(textAfterLink);
+
+  educationsBox.appendChild(medieinstitutet);
+  educationsBox.appendChild(programmering1);
+  educationsBox.appendChild(webbutveckling1);
+
   relevantEducation.appendChild(eduHeading);
-  relevantEducation.appendChild(eduParagraph1);
+  relevantEducation.appendChild(educationsBox);
   container.appendChild(relevantEducation);
 
   //Work Experience
@@ -111,9 +134,10 @@ function createAboutContainer() {
     "p-3",
     "mb-5",
     "bg-body",
-    "rounded",
-    "workExperienceBox"
+    "rounded"
   );
+  workExperience.id = "workExperienceBox";
+
   let workHeading = document.createElement("h5");
   workHeading.innerHTML = "Work experience";
   let workParagraph1 = document.createElement("p");
@@ -123,12 +147,33 @@ function createAboutContainer() {
   workExperience.appendChild(workParagraph1);
   container.appendChild(workExperience);
 
+  //CV
+  let CV = document.createElement("div");
+  CV.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
+  CV.id = "CVBox";
+
+  let CVHeading = document.createElement("h5");
+  CVHeading.innerHTML = "CV";
+
+  let CVParagraph1 = document.createElement("p");
+  let CVLink = document.createElement("a");
+  CVLink.href =
+    "https://www.dropbox.com/s/ms1pg4pjfu2ydlb/AngelicaReuterswardResume.pdf?dl=0";
+  CVLink.target = "_blank";
+  CVLink.innerHTML = "Click here to see my CV!";
+  CVLink.id = "CVLink";
+  CVParagraph1.appendChild(CVLink);
+
+  CV.appendChild(CVHeading);
+  CV.appendChild(CVParagraph1);
+  container.appendChild(CV);
+
   /* HTML */
   aboutContainer.appendChild(aboutHeading);
   aboutContainer.appendChild(container);
 }
 
-function createProjectsContainer() {
+function projectsContainer() {
   let projectsContainer: HTMLDivElement = document.getElementById(
     "projectsContainer"
   ) as HTMLDivElement;
@@ -141,7 +186,7 @@ function createProjectsContainer() {
   projectsContainer.appendChild(projParagraph1);
 }
 
-function createContactContainer() {
+function contactContainer() {
   let contactContainer: HTMLDivElement = document.getElementById(
     "contactContainerJS"
   ) as HTMLDivElement;

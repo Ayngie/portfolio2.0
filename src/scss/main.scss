@@ -90,16 +90,52 @@ html {
                     #helloContainer {
                         .profileImgBox {
                             .profileImg {
+                                margin: 10px;
+                                width: 40%;
                                 border-radius: 50%;
                             }
                         }
                     }
 
-                    #aboutContainer {
-                        #techStackBox, #relevantEducationBox, #workExperienceBox {
-                            h4 {
+                    #aboutContainer{
+                        .aboutBoxes {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15%;
+
+                            #relevantEducationBox {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .educationsBox {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items:flex-start;    
+                                    #medieinstitutetURL {
+                                        text-decoration: none;
+                                        color: pink;
+                                    }
+                                }
+                            }
+
+                            #workExperienceBox {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    width: 60%;
+                                }
+                            }
+
+                            #CVBox {
+                                #CVLink {
+                                    text-decoration: none;
+                                    color: pink;
+                                }
                             }
                         }
+
                         .techImgBox {
                             display: flex;
                             justify-content: center;
@@ -110,16 +146,20 @@ html {
                             }
                         }
                     }
+
                     #contactContainer {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-        
-                        ul {
+
+                        #socialsBox {
                             display: flex;
                             flex-direction: row;
-                            gap: 15px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 25px;
+                            padding-left: 0;
         
                             li {
                                 list-style: none;
@@ -210,6 +250,15 @@ html {
                 }
 
                 .mainContainer {
+                    #helloContainer {
+                        .profileImgBox {
+                            .profileImg {
+                                padding: 1%;
+                                width: 20% !important;
+                            }
+                        }
+                    }
+
                     #contactContainer {
                         ul {
                             // width: 15%;
