@@ -12,9 +12,11 @@ html {
             // box-sizing: content-box;
             background-color: rgb(255, 246, 246);
             border-radius: 5px;
-
+            
             //padding: 10%; /*/ ???
             margin-top: 0%;
+            padding-top: 2%;
+            padding-bottom: 3%;
 
             header {
                 nav {
@@ -31,6 +33,7 @@ html {
             }
 
             main {
+
                 .mainHeading {
                     display: flex;
                     flex-direction: column;
@@ -168,7 +171,26 @@ html {
                                 #CVLink {
                                     text-decoration: none;
                                     color: pink;
+
+                                    display: inline-block;
+                                    animation: skew 5s infinite;
+                                    transform: skew(20deg);
+                                    opacity: 1;
                                 }
+                                @keyframes skew {
+                                    0% {
+                                      transform: skewX(0deg);
+                                    }
+                                    25% {
+                                        transform: skewX(20deg);
+                                      }
+                                    50% {
+                                        transform: skewX(-20deg);
+                                      }
+                                    100% {
+                                      transform: skewX(0deg);
+                                    }
+                                  }
                             }
                         }
 
@@ -274,6 +296,7 @@ html {
                 font-family: Damion;
                 /* padding: 1%; */
                 //padding-left: 0;
+                // padding-bottom: 3%;
                 
 
             }
@@ -286,8 +309,10 @@ html {
         .container {
             padding: 3%;
             margin-top: 2%;
+            padding-top: 0%;
+            padding-bottom: 0%;
 
-            main {
+            main {                
                 .mainHeading {
                     .FED {
                         font-size: 1.4rem;
