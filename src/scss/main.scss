@@ -28,7 +28,35 @@ html {
                         font-family: Damion;
                         font-size: 161%;
                     }
-                
+                    .container-fluid {
+                        display: flex;
+                        flex-direction: row;
+
+                        // .navbar-nav {
+                        //     .nav-link {
+                        //         cursor: pointer;
+                        //         border-bottom: 1px solid rgba(255, 105, 180, 0);
+                        //         transition: border 0.2s;
+                        //         // transition: background-color 0.2s linear;
+                        //         // transition: color 0.2s;
+                        //         margin: 5px;
+                        //         padding-bottom: 2px;
+                            
+                        //         &:hover {
+                        //             border-bottom: 2px solid rgba(255, 105, 180, 1);
+                        //             // background-color: pink;
+                        //             border-radius: 5px;
+                                
+                        //             // color: black;
+                        //         }
+                        //         &:visited {
+                        //             border-bottom: 1px solid rgba(255, 105, 180, 0);
+                        //         }
+                        // }
+                        // }
+                    }
+
+
                 }
             }
 
@@ -110,7 +138,7 @@ html {
                                 &:hover {
                                     width: 42% !important;
                                     transform: rotate(-5deg);
-                                    margin: 22.3px;
+                                    margin: 22.4px;
                                 }
                             }
                         }
