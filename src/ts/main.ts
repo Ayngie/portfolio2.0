@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 function createHtml() {
   let helloContainer: HTMLDivElement = document.getElementById(
     "helloContainer"
@@ -7,9 +5,9 @@ function createHtml() {
   let aboutContainer: HTMLDivElement = document.getElementById(
     "aboutContainer"
   ) as HTMLDivElement;
-  let techStackContainer: HTMLDivElement = document.getElementById(
-    "techStack"
-  ) as HTMLDivElement;
+  // let techStackContainer: HTMLDivElement = document.getElementById(
+  //   "techStack"
+  // ) as HTMLDivElement;
   let projectsContainer: HTMLDivElement = document.getElementById(
     "projectsContainer"
   ) as HTMLDivElement;
@@ -36,15 +34,20 @@ function createHtml() {
   helloParagraph2.appendChild(span2);
   helloParagraph2.appendChild(span3);
 
-  //let profilePic = document.createElement("img") as HTMLImageElement;
-  //profilePic.setAttribute("src", "/src/assets/profilepic.jpeg"); //VARFÖR BRUTEN BILD?!
-  //profilePic.setAttribute("alt", "Profile picture");
-  //profilePic.classList.add("profilePic");
+  let profilePic = document.createElement("img");
+  profilePic.src =
+    "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
+  // profilePic.src =
+  //   "https://www.dropbox.com/s/vblwti10ghj7f8g/profilepic.jpeg?dl=0";
+  // profilePic.src =
+  //   "https://github.com/Ayngie/portfolio2.0/blob/main/src/assets/profilepic.jpeg?raw=true";
+  profilePic.alt = "Profile picture";
+  profilePic.classList.add("profilePic");
 
   helloContainer.appendChild(helloHeading);
   helloContainer.appendChild(helloParagraph1);
   helloContainer.appendChild(helloParagraph2);
-  //helloContainer.appendChild(profilePic);
+  helloContainer.appendChild(profilePic);
 
   //techStackContainer
   // let techStackPic = document.createElement("img") as HTMLImageElement;
