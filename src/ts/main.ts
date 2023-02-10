@@ -12,7 +12,7 @@ function helloContainer() {
 
   /* TEXT */
   let helloHeading = document.createElement("h4");
-  helloHeading.innerHTML = "Hi! I'm Angie!";
+  helloHeading.innerHTML = "Hi! I'm Angelica!";
 
   let helloParagraph1 = document.createElement("p");
   helloParagraph1.innerHTML = "Welcome to my portfolio.";
@@ -40,11 +40,29 @@ function helloContainer() {
   profileImg.classList.add("profileImg");
   profileImgBox.appendChild(profileImg);
 
+  /* MORE TEXT */
+
+  let helloAboutParagraphs = document.createElement("div");
+  helloAboutParagraphs.id = "helloAboutParagraphs";
+  let myParagraph1 = document.createElement("p");
+  myParagraph1.innerHTML =
+    "Who am I? I'm an Osteopath turned Front End Developer. After a decade of working in manual medicine, I have discovered a new passion in frontend development. I never knew how much fun it was!";
+  let myParagraph2 = document.createElement("p");
+  myParagraph2.innerHTML =
+    "Once I started learning more, I couldn't stop. Now I'm more than halfway through the first year at Medieinstitutet Sthlm, and we're searching for internships as we speak...";
+  let myParagraph3 = document.createElement("p");
+  myParagraph3.innerHTML =
+    "If you have an internship opening, feel free to contact me. I'm so excited to get started in the tech world!";
+
+  helloAboutParagraphs.appendChild(myParagraph1);
+  helloAboutParagraphs.appendChild(myParagraph2);
+  helloAboutParagraphs.appendChild(myParagraph3);
   /* HTML */
   helloContainer.appendChild(helloHeading);
   helloContainer.appendChild(helloParagraph1);
   helloContainer.appendChild(helloParagraph2);
   helloContainer.appendChild(profileImgBox);
+  helloContainer.appendChild(helloAboutParagraphs);
 }
 
 function aboutContainer() {

@@ -88,6 +88,11 @@ html {
                     }
 
                     #helloContainer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        
                         .profileImgBox {
                             .profileImg {
                                 margin: 10px;
@@ -95,9 +100,17 @@ html {
                                 border-radius: 50%;
                             }
                         }
+                        #helloAboutParagraphs {
+                            width: 80%;
+                        }
                     }
 
                     #aboutContainer{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
                         .aboutBoxes {
                             display: flex;
                             flex-direction: column;
@@ -124,7 +137,7 @@ html {
                                 justify-content: center;
                                 align-items: center;
                                 p {
-                                    width: 60%;
+                                    width: 80%;
                                 }
                             }
 
@@ -153,6 +166,16 @@ html {
                         justify-content: center;
                         align-items: center;
 
+                        #contactContainerJS {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 80%;    
+                            p {
+                                width: 100%;
+                            }
+                        }
                         #socialsBox {
                             display: flex;
                             flex-direction: row;
@@ -251,15 +274,39 @@ html {
 
                 .mainContainer {
                     #helloContainer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
                         .profileImgBox {
                             .profileImg {
                                 padding: 1%;
-                                width: 20% !important;
+                                width: 40% !important;
+                            }
+                        }
+
+                        #helloAboutParagraphs {
+                            width: 65% !important;
+                        }
+                    }
+
+                    #aboutContainer {
+                        #workExperienceBox {
+                            p {
+                                width: 65%;
                             }
                         }
                     }
 
                     #contactContainer {
+                        #contactContainerJS {
+                            width: 65%;
+                            p {
+                                width: 100%;
+                            }
+                        }
+
                         ul {
                             // width: 15%;
                             display: flex;
@@ -277,11 +324,11 @@ html {
                 }
             }
 
-            footer {
-                // display: flex;
-                // flex-direction: row !important;
-                //align-items: center;
-            }
+            // footer {
+            //     // display: flex;
+            //     // flex-direction: row !important;
+            //     //align-items: center;
+            // }
         }
     }
 
