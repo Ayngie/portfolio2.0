@@ -1,7 +1,7 @@
 function createHtml() {
   helloContainer();
-  aboutContainer();
   projectsContainer();
+  aboutContainer();
   contactContainer();
 }
 
@@ -34,8 +34,9 @@ function helloContainer() {
   profileImgBox.classList.add("profileImgBox");
 
   let profileImg = document.createElement("img");
-  profileImg.src =
-    "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
+  profileImg.src = "https://angelicareutersward.se/assets/profilepic.jpeg";
+  // profileImg.src =
+  //   "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
   profileImg.alt = "Profile picture";
   profileImg.classList.add("profileImg");
   profileImgBox.appendChild(profileImg);
@@ -65,6 +66,29 @@ function helloContainer() {
   helloContainer.appendChild(helloAboutParagraphs);
 }
 
+function projectsContainer() {
+  let projectsContainer: HTMLDivElement = document.getElementById(
+    "projectsContainer"
+  ) as HTMLDivElement;
+
+  let projectsHeading = document.createElement("h4");
+  projectsHeading.innerHTML = "My projects";
+  // let projParagraph1 = document.createElement("p");
+  // projParagraph1.innerHTML = "Coming soon...";
+
+  let projectsImgBox = document.createElement("div");
+  projectsImgBox.classList.add("projectsImgBox");
+  let projectsImg = document.createElement("img");
+  projectsImg.src = "https://angelicareutersward.se/assets/ComingSoonBee.jpg";
+  projectsImg.alt = "Projects / Bumblebee";
+  projectsImg.classList.add("projectsImg");
+  projectsImgBox.appendChild(projectsImg);
+
+  projectsContainer.appendChild(projectsHeading);
+  // projectsContainer.appendChild(projParagraph1);
+  projectsContainer.appendChild(projectsImgBox);
+}
+
 function aboutContainer() {
   let aboutContainer: HTMLDivElement = document.getElementById(
     "aboutContainer"
@@ -88,8 +112,7 @@ function aboutContainer() {
   let techImgBox = document.createElement("div");
   techImgBox.classList.add("techImgBox");
   let techImg = document.createElement("img");
-  techImg.src =
-    "https://previews.dropbox.com/p/thumb/AByejo6LZKZ2uVVtZ45Mt3Zt7jqjuO5KyLM5C1jv4C0d0ANAIcrOCF_68axgpm-AZdbiC3kwANAdHy8NcOp2CIbhRsN4PBrB4jfVassgLWFVx0PWtcNlZ18gZU2w2VjyALO6RVI6ECxHS1t3Cc0Sb-JcfURhzIVKgqVt6gHdtuGFsXYu5pvMyZBsr2bx9Pe0u9xTKqyitnKH4cJYVmaPkIOEWz_lASFmFc-6W_L7UDitH19vBhtCKbGRHgds-ftUqNpqKmg1BkBnKOxJHLY7XH2yQS06Wl-PhvyYOnFmpLwsIwFKjuDoefNuZL9laOJ8MgnHt60jNX5JhKWW0XTEcT50mlx7ziAnS7EWE3jnOUQFCQ4Vnb0PSlg1SlfFgCq24mP555BHFdgiq4tZNQseIYbuyLEmGTP8wCFMJD37S-D6wZxCtO9rUTkAW7mUFvgz4T8/p.jpeg";
+  techImg.src = "https://angelicareutersward.se/assets/ComingSoon.jpg";
   techImg.alt = "Tech stack / Turtle";
   techImg.classList.add("techImg");
   techImgBox.appendChild(techImg);
@@ -176,7 +199,7 @@ function aboutContainer() {
   let CVParagraph1 = document.createElement("p");
   let CVLink = document.createElement("a");
   CVLink.href =
-    "https://www.dropbox.com/s/ms1pg4pjfu2ydlb/AngelicaReuterswardResume.pdf?dl=0";
+    "https://angelicareutersward.se/CV/AngelicaReuterswardResume.pdf";
   CVLink.target = "_blank";
   CVLink.innerHTML = "Click here to see my CV!";
   CVLink.id = "CVLink";
@@ -189,19 +212,6 @@ function aboutContainer() {
   /* HTML */
   aboutContainer.appendChild(aboutHeading);
   aboutContainer.appendChild(container);
-}
-
-function projectsContainer() {
-  let projectsContainer: HTMLDivElement = document.getElementById(
-    "projectsContainer"
-  ) as HTMLDivElement;
-
-  let projectsHeading = document.createElement("h4");
-  projectsHeading.innerHTML = "My projects";
-  let projParagraph1 = document.createElement("p");
-  projParagraph1.innerHTML = "Coming soon...";
-  projectsContainer.appendChild(projectsHeading);
-  projectsContainer.appendChild(projParagraph1);
 }
 
 function contactContainer() {

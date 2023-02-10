@@ -92,16 +92,34 @@ html {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        h4 {
+                            padding-top: 1.5%;
+                            padding-bottom: 1.5%;
+                        }
                         
                         .profileImgBox {
                             .profileImg {
-                                margin: 10px;
+                                margin: 25px;
                                 width: 40%;
                                 border-radius: 50%;
+                                
                             }
                         }
                         #helloAboutParagraphs {
                             width: 80%;
+                        }
+                    }
+
+                    #projectsContainer {
+                        .projectsImgBox {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .projectsImg {
+                                width: 50%;
+                                border-radius: 7.5px;
+                            }
                         }
                     }
 
@@ -176,6 +194,7 @@ html {
                                 width: 100%;
                             }
                         }
+
                         #socialsBox {
                             display: flex;
                             flex-direction: row;
@@ -187,33 +206,33 @@ html {
                             li {
                                 list-style: none;
                                        
-                                &:hover {
-                                    height: 10px;
-                                    width: 10px;
-                                    transform: rotate(45deg);
-                                    @include mixins.themeColor;
-                                    animation: heart 1.5s infinite;
+                                // &:hover {
+                                //     height: 10px;
+                                //     width: 10px;
+                                //     transform: rotate(45deg);
+                                //     @include mixins.themeColor;
+                                //     animation: heart 1.5s infinite;
                             
-                                    svg {
-                                        transform: rotate(-45deg);
-                                        translate: 2px;
-                                    }
-                                }
-                                &:hover::before, &:hover::after { 
-                                    position: absolute;
-                                    content: ""; 
-                                    height: 10px;
-                                    width: 10px;
-                                    border-radius: 50%;
-                                    @include mixins.themeColor;
-                                }
-                                &:hover::before {
-                                    left: -7px;
+                                //     svg {
+                                //         transform: rotate(-45deg);
+                                //         translate: 2px;
+                                //     }
+                                // }
+                                // &:hover::before, &:hover::after { 
+                                //     position: absolute;
+                                //     content: ""; 
+                                //     height: 10px;
+                                //     width: 10px;
+                                //     border-radius: 50%;
+                                //     @include mixins.themeColor;
+                                // }
+                                // &:hover::before {
+                                //     left: -7px;
                             
-                                }
-                                &:hover::after {
-                                    top: -7px;
-                                }
+                                // }
+                                // &:hover::after {
+                                //     top: -7px;
+                                // }
         
                                 a {
                                     position: relative;
@@ -222,10 +241,12 @@ html {
                                     text-decoration: none;
                                     cursor: pointer;
         
-        
-        
                                     &:active {
                                         color: rgb(255, 0, 111);
+                                    }
+
+                                    &:visited {
+                                        color: black;
                                     }
                                 
                                     svg {
@@ -307,28 +328,69 @@ html {
                             }
                         }
 
-                        ul {
+                        #socialsBox {
                             // width: 15%;
                             display: flex;
                             flex-direction: row;
                             justify-content: center;
                             gap: 15px;
-                        
-                            
+        
                             li {
                                 display: flex;
                                 flex-direction: row;
+                                       
+                                &:hover {
+                                    height: 10px;
+                                    width: 10px;
+                                    transform: rotate(45deg);
+                                    @include mixins.themeColor;
+                                    animation: heart 1.5s infinite;
+                            
+                                    svg {
+                                        transform: rotate(-45deg);
+                                        translate: 2px;
+                                    }
+                                }
+                                &:hover::before, &:hover::after { 
+                                    position: absolute;
+                                    content: ""; 
+                                    height: 10px;
+                                    width: 10px;
+                                    border-radius: 50%;
+                                    @include mixins.themeColor;
+                                }
+                                &:hover::before {
+                                    left: -7px;
+                            
+                                }
+                                &:hover::after {
+                                    top: -7px;
+                                }
+        
+                                a {
+                                    position: relative;
+        
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+        
+                                    &:active {
+                                        color: rgb(255, 0, 111) !important;
+                                    }
+                                
+                                    &:visited {
+                                        color: black;
+                                    }
+                                
+                                    svg {
+                                        border-radius: 3px;
+                                    }
+                                }      
                             }
                         }
                     }
                 }
             }
-
-            // footer {
-            //     // display: flex;
-            //     // flex-direction: row !important;
-            //     //align-items: center;
-            // }
         }
     }
 
