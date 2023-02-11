@@ -6,6 +6,20 @@
 
 @mixin contrastColor {
     background-color: rgb(255, 168, 216);
+    // background-color: rgb(93, 212, 173);
+    // background-color: rgb(145, 238, 207);
+    // background-color: rgb(125, 205, 178);
+
+
+
+}
+
+@mixin fontThemeColor {
+    color: rgb(255, 0, 111)
+}
+
+@mixin fontContrastColor {
+    color: rgb(255, 168, 216);
 }
 
 /* -------------------------------- ANIMATIONS -------------------------------- */

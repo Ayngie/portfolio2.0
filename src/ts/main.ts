@@ -1,3 +1,9 @@
+// import { appendFile } from "fs";
+import { IRepo } from "./models/iRepo";
+import { getData } from "./services/gitrepos";
+
+let repos: IRepo[] = [];
+
 function createHtml() {
   helloContainer();
   projectsContainer();
@@ -35,8 +41,6 @@ function helloContainer() {
 
   let profileImg = document.createElement("img");
   profileImg.src = "https://angelicareutersward.se/assets/profilepic.jpeg";
-  // profileImg.src =
-  //   "https://previews.dropbox.com/p/thumb/AByTpw0aa09HSlg8HM1b1MGjonkkJrXcq3OHnexo7TPotl6mPbsItK3_ZaJsDhVIBLbkWwu5SPJZe6-YCGw7x3538GwVm1eM55AbF1YYFq8ltGDx_Es6NCUN27Ze0wAJoTf1p0EjPFgno_jgMY89gJuMY1gBF9O7drGPjdOErqqDKBOu15R02-L9UGPaD2RU5_Mb4AFgrSowARUTJsGVapjFPdCcFwkDm_2tVG45VE9tJtMmP36HTzc2gWvX_V7jZD-MmTLNXKm4AhPJumgWzG16oI4RDH0qxiKsaMDP-HzaesZysgcOMGaPy8MOYmnEedYhvSrLmivO_wQbJj9YrDtq01jzxjc__7-Hp6ooIxV3ZEfz3lZVriJFRs2KNzI1fpA/p.jpeg";
   profileImg.alt = "Profile picture";
   profileImg.classList.add("profileImg");
   profileImgBox.appendChild(profileImg);
@@ -68,25 +72,68 @@ function helloContainer() {
 
 function projectsContainer() {
   let projectsContainer: HTMLDivElement = document.getElementById(
-    "projectsContainer"
+    "projectsContainer__heading"
   ) as HTMLDivElement;
 
   let projectsHeading = document.createElement("h4");
   projectsHeading.innerHTML = "My projects";
-  // let projParagraph1 = document.createElement("p");
-  // projParagraph1.innerHTML = "Coming soon...";
+  let projParagraph1 = document.createElement("p");
+  projParagraph1.innerHTML =
+    "Here are some of my projects from my time at Medieinstitutet Stockholm.";
 
-  let projectsImgBox = document.createElement("div");
-  projectsImgBox.classList.add("projectsImgBox");
-  let projectsImg = document.createElement("img");
-  projectsImg.src = "https://angelicareutersward.se/assets/ComingSoonBee.jpg";
-  projectsImg.alt = "Projects / Bumblebee";
-  projectsImg.classList.add("projectsImg");
-  projectsImgBox.appendChild(projectsImg);
-
+  // let projectsImgBox = document.createElement("div");
+  // projectsImgBox.classList.add("projectsImgBox");
+  // let projectsImg = document.createElement("img");
+  // projectsImg.src = "https://angelicareutersward.se/assets/ComingSoonBee.jpg";
+  // projectsImg.alt = "Projects / Bumblebee";
+  // projectsImg.classList.add("projectsImg");
+  // projectsImgBox.appendChild(projectsImg);
   projectsContainer.appendChild(projectsHeading);
-  // projectsContainer.appendChild(projParagraph1);
-  projectsContainer.appendChild(projectsImgBox);
+  projectsContainer.appendChild(projParagraph1);
+  // projectsContainer.appendChild(projectsImgBox);
+
+  //GET REPOSITORIES
+  getRepos();
+}
+
+async function getRepos() {
+  repos = await getData();
+  console.log(repos);
+  reposContainer(repos);
+}
+
+function reposContainer(repos: IRepo[]) {
+  //CREATE HTML FOR REPOSITORIES
+  let reposContainer = document.getElementById(
+    "projectsContainer__repos"
+  ) as HTMLDivElement;
+
+  reposContainer.innerHTML = "";
+
+  for (let i = 0; i < repos.length; i++) {
+    let container = document.createElement("div");
+    container.classList.add("repoBox");
+    container.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
+
+    let link = document.createElement("a");
+    link.href = repos[i].html_url;
+    link.target = "_blank";
+    link.classList.add("repo__link");
+
+    let title = document.createElement("p");
+    title.classList.add("repo__title");
+    title.innerHTML = repos[i].name;
+    link.appendChild(title);
+
+    let description = document.createElement("p");
+    description.classList.add("repo__description");
+    description.innerHTML = repos[i].description;
+    title.appendChild(description);
+
+    container.appendChild(link);
+
+    reposContainer.appendChild(container);
+  }
 }
 
 function aboutContainer() {
