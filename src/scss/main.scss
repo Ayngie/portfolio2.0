@@ -202,7 +202,8 @@ html {
                                         // color: white;
 
                                         // color: black;
-                                        @include mixins.fontThemeColor;
+                                        // @include mixins.fontThemeColor;
+                                        @include mixins.fontContrastColor;
                                         font-family: Damion;
                                         font-size: 1.5rem;
 
