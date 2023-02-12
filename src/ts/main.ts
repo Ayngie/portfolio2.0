@@ -4,14 +4,16 @@ import { getData } from "./services/gitrepos";
 
 let repos: IRepo[] = [];
 
-function createHtml() {
-  helloContainer();
-  projectsContainer();
-  aboutContainer();
-  contactContainer();
+function init() {
+  createHelloContainerHTML();
+  initProjectsContainerHTML();
+  createAboutContainerHTML();
+  createContactContainerHTML();
 }
 
-function helloContainer() {
+/* --------------------- HELLO --------------------- */
+//CREATE HTML FOR HELLOCONTAINER
+function createHelloContainerHTML() {
   let helloContainer: HTMLDivElement = document.getElementById(
     "helloContainer"
   ) as HTMLDivElement;
@@ -70,7 +72,9 @@ function helloContainer() {
   helloContainer.appendChild(helloAboutParagraphs);
 }
 
-function projectsContainer() {
+/* --------------------- PROJECTS --------------------- */
+//INIT CREATE HTML FOR PROJECTSCONTAINER
+function initProjectsContainerHTML() {
   let projectsContainer: HTMLDivElement = document.getElementById(
     "projectsContainer__heading"
   ) as HTMLDivElement;
@@ -92,23 +96,56 @@ function projectsContainer() {
   projectsContainer.appendChild(projParagraph1);
   // projectsContainer.appendChild(projectsImgBox);
 
-  //GET REPOSITORIES
-  getRepos();
+  createHtmlForGetReposButton();
 }
 
-async function getRepos() {
-  repos = await getData();
-  console.log(repos);
-  reposContainer(repos);
-}
-
-function reposContainer(repos: IRepo[]) {
-  //CREATE HTML FOR REPOSITORIES
+//CREATE HTML FOR EXPAND BUTTON
+function createHtmlForGetReposButton() {
   let reposContainer = document.getElementById(
     "projectsContainer__repos"
   ) as HTMLDivElement;
+  let collapseBtnContainer = document.getElementById(
+    "projectsContainer__collapseBtn"
+  ) as HTMLDivElement;
 
   reposContainer.innerHTML = "";
+  collapseBtnContainer.innerHTML = "";
+
+  let expandBtn = document.createElement("button");
+  expandBtn.setAttribute("type", "button");
+  expandBtn.classList.add("showcasebtn");
+  expandBtn.classList.add("btn", "btn-light");
+  expandBtn.innerHTML = "EXPAND";
+  expandBtn.addEventListener("click", getRepos); //GET REPOS
+
+  reposContainer.appendChild(expandBtn);
+}
+
+//GET REPOS
+async function getRepos() {
+  repos = await getData();
+  console.log(repos);
+  createReposContainerHTML(repos);
+}
+
+//CREATE HTML FOR REPOSITORIES
+function createReposContainerHTML(repos: IRepo[]) {
+  let reposContainer = document.getElementById(
+    "projectsContainer__repos"
+  ) as HTMLDivElement;
+  let collapseBtnContainer = document.getElementById(
+    "projectsContainer__collapseBtn"
+  ) as HTMLDivElement;
+
+  reposContainer.innerHTML = "";
+  collapseBtnContainer.innerHTML = "";
+
+  let collapseBtn = document.createElement("button");
+  collapseBtn.setAttribute("type", "button");
+  collapseBtn.classList.add("showcasebtn");
+  collapseBtn.classList.add("btn", "btn-light");
+  collapseBtn.innerHTML = "COLLAPSE";
+  collapseBtn.addEventListener("click", createHtmlForGetReposButton);
 
   for (let i = 0; i < repos.length; i++) {
     let container = document.createElement("div");
@@ -134,9 +171,12 @@ function reposContainer(repos: IRepo[]) {
 
     reposContainer.appendChild(container);
   }
+  collapseBtnContainer.appendChild(collapseBtn);
 }
 
-function aboutContainer() {
+/* --------------------- ABOUT --------------------- */
+// CREATE HTML FOR ABOUTCONTAINER
+function createAboutContainerHTML() {
   let aboutContainer: HTMLDivElement = document.getElementById(
     "aboutContainer"
   ) as HTMLDivElement;
@@ -288,7 +328,9 @@ function aboutContainer() {
   aboutContainer.appendChild(container);
 }
 
-function contactContainer() {
+/* --------------------- CONTACT --------------------- */
+//CREATE HTML FOR CONTACTCONTAINER
+function createContactContainerHTML() {
   let contactContainer: HTMLDivElement = document.getElementById(
     "contactContainerJS"
   ) as HTMLDivElement;
@@ -308,4 +350,4 @@ function contactContainer() {
   contactContainer.appendChild(contactParagraph2);
 }
 
-createHtml();
+init();
