@@ -76,6 +76,7 @@ html {
                             }
                         }
                     }
+
                     #helloContainer, #aboutContainer, #projectsContainer, #contactContainer {
                         background-color: white;
                         padding: 4% !important;
@@ -333,7 +334,7 @@ html {
                                     cursor: pointer;
         
                                     &:active {
-                                        color: rgb(255, 0, 111);
+                                        color: rgb(255, 0, 111) !important;
                                     }
 
                                     &:visited {
