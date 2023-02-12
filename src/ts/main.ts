@@ -144,8 +144,13 @@ function createReposContainerHTML(repos: IRepo[]) {
   collapseBtn.setAttribute("type", "button");
   collapseBtn.classList.add("showcasebtn");
   collapseBtn.classList.add("btn", "btn-light");
+  collapseBtn.setAttribute("href", "#projectsContainer");
   collapseBtn.innerHTML = "COLLAPSE";
   collapseBtn.addEventListener("click", createHtmlForGetReposButton);
+
+  let collapseBtnALink = document.createElement("a");
+  collapseBtnALink.setAttribute("href", "#projectsContainer");
+  collapseBtnALink.appendChild(collapseBtn);
 
   for (let i = 0; i < repos.length; i++) {
     let container = document.createElement("div");
@@ -171,7 +176,7 @@ function createReposContainerHTML(repos: IRepo[]) {
 
     reposContainer.appendChild(container);
   }
-  collapseBtnContainer.appendChild(collapseBtn);
+  collapseBtnContainer.appendChild(collapseBtnALink);
 }
 
 /* --------------------- ABOUT --------------------- */
