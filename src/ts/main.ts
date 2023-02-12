@@ -201,14 +201,6 @@ function createAboutContainerHTML() {
   let techHeading = document.createElement("h5");
   techHeading.innerHTML = "Technical Skills";
 
-  // let techImgBox = document.createElement("div");
-  // techImgBox.classList.add("techImgBox");
-  // let techImg = document.createElement("img");
-  // techImg.src = "https://angelicareutersward.se/assets/ComingSoon.jpg";
-  // techImg.alt = "Tech stack / Turtle";
-  // techImg.classList.add("techImg");
-  // techImgBox.appendChild(techImg);
-
   let skillsIconsBox = document.createElement("div");
   skillsIconsBox.classList.add("skillsIconsBox");
   skillsIconsBox.innerHTML = `
@@ -237,7 +229,6 @@ function createAboutContainerHTML() {
   `;
 
   techSkills.appendChild(techHeading);
-  // techSkills.appendChild(techImgBox);
   techSkills.appendChild(skillsIconsBox);
 
   container.appendChild(techSkills);
