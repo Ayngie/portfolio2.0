@@ -232,6 +232,8 @@ function createAboutContainerHTML() {
   <i class="devicon-mongodb-plain">MongoDB </i>
   <span>NoSQL </span>
   <span>SQL </span>
+  <span>SCRUM </span>
+  <span>Jira </span>
   `;
 
   techSkills.appendChild(techHeading);
