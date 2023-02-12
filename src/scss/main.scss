@@ -96,9 +96,10 @@ html {
 
                         a {
                             text-decoration: none;
+
                             svg{
-                                // @include mixins.fontThemeColor;  
-                                color: pink;  
+                                // @include mixins.fontContrastColor;  
+                                color: rgb(255, 188, 234);  
                             }
                         }
                     }
@@ -114,6 +115,9 @@ html {
                     #helloContainer, #aboutContainer, #projectsContainer, #contactContainer {
                         //height: 100vh;
                         h4 {
+                            margin-bottom: 2%;    
+                        }
+                        h5 {
                             margin-bottom: 2%;    
                         }
                         .alive {
@@ -201,14 +205,19 @@ html {
                                         @include mixins.fontThemeColor;
                                         font-family: Damion;
                                         font-size: 1.5rem;
+
                                         .repo__description {
+                                            font-family: Playfair Display;
                                             // @include mixins.contrastColor;
                                             // color: white;
-                                            color: rgb(255, 191, 211);
+                                            color: black;
+                                            //color: rgb(255, 191, 211);
+                                            // @include mixins.fontContrastColor;  
+
                                             // border-radius: 15px;
                                             // padding-left: 10px;
                                             // padding-right: 10px;
-                                            font-size: 1rem;
+                                            font-size: .9rem;
                                         }
                                     }
                                 }
@@ -227,6 +236,30 @@ html {
                             flex-direction: column;
                             gap: 15%;
 
+                            #techSkillsBox {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                .skillsIconsBox {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+                                    // color: pink;
+                                    // @include mixins.fontThemeColor;  
+                                    @include mixins.fontContrastColor;  
+
+                                    width: 80%;
+                                    gap: 20px;
+
+                                    span {
+                                        font-size: .9rem;
+                                    }
+                                }                         
+                            }
+
                             #relevantEducationBox {
                                 display: flex;
                                 flex-direction: column;
@@ -237,7 +270,9 @@ html {
                                     align-items:flex-start;    
                                     #medieinstitutetURL {
                                         text-decoration: none;
-                                        color: pink;
+                                        //color: pink;
+                                        @include mixins.fontContrastColor;  
+
                                     }
                                 }
                             }
@@ -255,11 +290,14 @@ html {
                             #CVBox {
                                 #CVLink {
                                     text-decoration: none;
-                                    color: pink;
+                                    // color: pink;
+                                    @include mixins.fontContrastColor;  
+
+                                    font-weight: bold;
 
                                     display: inline-block;
                                     animation: skew 5s infinite;
-                                    transform: skew(20deg);
+                                    transform: skew(10deg);
                                     opacity: 1;
                                 }
                                 @keyframes skew {
@@ -267,10 +305,10 @@ html {
                                       transform: skewX(0deg);
                                     }
                                     25% {
-                                        transform: skewX(20deg);
+                                        transform: skewX(10deg);
                                       }
                                     50% {
-                                        transform: skewX(-20deg);
+                                        transform: skewX(-10deg);
                                       }
                                     100% {
                                       transform: skewX(0deg);
@@ -441,6 +479,12 @@ html {
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: flex-start;
+
+                                .repo__link:hover {
+                                    display: inline-block;
+                                    animation: skew 5s infinite;
+                                    transform: skew(10deg);
+                                    opacity: 1;                                }
                             }
 
                         }
