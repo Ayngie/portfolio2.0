@@ -85,16 +85,8 @@ function initProjectsContainerHTML() {
   projParagraph1.innerHTML =
     "Here are some of my projects from my time at Medieinstitutet Stockholm.";
 
-  // let projectsImgBox = document.createElement("div");
-  // projectsImgBox.classList.add("projectsImgBox");
-  // let projectsImg = document.createElement("img");
-  // projectsImg.src = "https://angelicareutersward.se/assets/ComingSoonBee.jpg";
-  // projectsImg.alt = "Projects / Bumblebee";
-  // projectsImg.classList.add("projectsImg");
-  // projectsImgBox.appendChild(projectsImg);
   projectsContainer.appendChild(projectsHeading);
   projectsContainer.appendChild(projParagraph1);
-  // projectsContainer.appendChild(projectsImgBox);
 
   createHtmlForGetReposButton();
 }
@@ -201,6 +193,11 @@ function createAboutContainerHTML() {
   let techHeading = document.createElement("h5");
   techHeading.innerHTML = "Technical Skills";
 
+  let techSkillsComment = document.createElement("p");
+  techSkillsComment.innerHTML = `<p>Skills I will have aquired by the time of my LIA are:
+  </p>`;
+  techSkillsComment.id = "techSkillsComment";
+
   let skillsIconsBox = document.createElement("div");
   skillsIconsBox.classList.add("skillsIconsBox");
   skillsIconsBox.innerHTML = `
@@ -229,6 +226,7 @@ function createAboutContainerHTML() {
   `;
 
   techSkills.appendChild(techHeading);
+  techSkills.appendChild(techSkillsComment);
   techSkills.appendChild(skillsIconsBox);
 
   container.appendChild(techSkills);
@@ -295,7 +293,7 @@ function createAboutContainerHTML() {
   workHeading.innerHTML = "Work experience";
   let workParagraph1 = document.createElement("p");
   workParagraph1.innerHTML =
-    "I have run a private osteopathic clinic for over ten years, where i've been working with people to help them solve 'bugs' in other systems ;)";
+    "I have run a private osteopathic clinic for over ten years, where I learned a lot about running a small business, gained much practice on taking a holistic approach to problem-solving, and worked with people to help them solve 'bugs' in other systems ;)";
   workExperience.appendChild(workHeading);
   workExperience.appendChild(workParagraph1);
   container.appendChild(workExperience);

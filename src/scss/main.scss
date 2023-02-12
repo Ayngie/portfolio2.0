@@ -136,15 +136,15 @@ html {
 
                     #projectsContainer {
 
-                        // .projectsImgBox {
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     align-items: center;
-                        //     .projectsImg {
-                        //         width: 50%;
-                        //         border-radius: 7.5px;
-                        //     }
-                        // }
+                        #projectsContainer__heading {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            p {
+                                width: 80%;
+                            }
+                        }
 
                         #projectsContainer__repos {
                             display: flex;
@@ -211,6 +211,13 @@ html {
                                 justify-content: center;
                                 align-items: center;
                                 
+                                #techSkillsComment {
+                                    // margin-top: -10px;
+                                    font-style: italic;
+                                    font-size: .9rem;
+                                    //@include mixins.fontContrastColor;
+                                }
+
                                 .skillsIconsBox {
                                     margin-bottom: 1rem;
 
@@ -239,7 +246,7 @@ html {
                                 .educationsBox {
                                     display: flex;
                                     flex-direction: column;
-                                    align-items:flex-start;    
+                                    align-items:center;    
                                     #medieinstitutetURL {
                                         text-decoration: none;
                                         @include mixins.fontContrastColor;  
@@ -286,16 +293,6 @@ html {
                                   }
                             }
                         }
-
-                        // .techImgBox {
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     align-items: center;
-                        //     .techImg {
-                        //         width: 50%;
-                        //         border-radius: 7.5px;
-                        //     }
-                        // }
                     }
 
                     #contactContainer {
@@ -310,9 +307,9 @@ html {
                             justify-content: center;
                             align-items: center;
                             width: 80%;    
-                            p {
-                                width: 100%;
-                            }
+                            // p {
+                            //     width: 100%;
+                            // }
                         }
 
                         #socialsBox {
@@ -431,6 +428,12 @@ html {
                         }
                     }
                     #aboutContainer {
+                        #techSkillsBox {                            
+                            #techSkillsComment {
+                                margin-top: -10px;
+                            }
+                        }
+
                         #workExperienceBox {
                             p {
                                 width: 65%;
@@ -440,10 +443,7 @@ html {
 
                     #contactContainer {
                         #contactContainerJS {
-                            width: 65%;
-                            p {
-                                width: 100%;
-                            }
+                            // width: 65%;
                         }
 
                         #socialsBox {
