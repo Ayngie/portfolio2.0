@@ -166,6 +166,19 @@ function createReposContainerHTML(repos: IRepo[]) {
 
     container.appendChild(link);
 
+    // if (
+    //   repos[i].html_url ==
+    //   "https://github.com/Ayngie/assignment-typescript-Webshop-DukafintAB"
+    // ) {
+
+    //   let tryItLink = document.createElement("a");
+    //   tryItLink.setAttribute("href", "http://www.svd.se");
+    //   tryItLink.target = "_blank";
+    //   tryItLink.innerHTML = "Try it!";
+
+    //   container.appendChild(tryItLink);
+    // }
+
     reposContainer.appendChild(container);
   }
   collapseBtnContainer.appendChild(collapseBtnALink);
