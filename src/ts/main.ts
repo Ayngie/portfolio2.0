@@ -225,7 +225,6 @@ function createAboutContainerHTML() {
   <i class="devicon-css3-plain">CSS3 </i>
   <i class="devicon-bootstrap-plain">Bootstrap </i>
   <span>Parcel.js </span>
-  <span>Test automation </span>
   <i class="devicon-jest-plain">Jest</i>
   <span>Cypress </span>
   <i class="devicon-git-plain">Git </i>
@@ -324,7 +323,7 @@ function createAboutContainerHTML() {
   let CVParagraph1 = document.createElement("p");
   let CVLink = document.createElement("a");
   CVLink.href =
-    "https://angelicareutersward.se/CV/AngelicaReuterswardResume.pdf";
+    "https://angelicareutersward.se/CV/AngelicaReuterswardResume2023.pdf";
   CVLink.target = "_blank";
   CVLink.innerHTML = "Click here to see my CV!";
   CVLink.id = "CVLink";

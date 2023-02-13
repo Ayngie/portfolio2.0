@@ -323,9 +323,7 @@ html {
                             li {
                                 list-style: none;
         
-                                a {
-                                    position: relative;
-        
+                                a {        
                                     color: black;
                                     text-decoration: none;
                                     cursor: pointer;
@@ -454,8 +452,6 @@ html {
                             gap: 15px;
                             
                             .hoverHeart {
-                                padding: 2%;
-
                                 li {
                                     display: flex;
                                     flex-direction: row;
