@@ -105,12 +105,16 @@ function createHtmlForGetReposButton() {
 
   let expandBtn = document.createElement("button");
   expandBtn.setAttribute("type", "button");
-  expandBtn.classList.add("showcasebtn");
   expandBtn.classList.add("btn", "btn-light");
   expandBtn.innerHTML = "EXPAND";
   expandBtn.addEventListener("click", getRepos); //GET REPOS
 
-  reposContainer.appendChild(expandBtn);
+  let expandBtnALink = document.createElement("a");
+  expandBtnALink.setAttribute("href", "#projectsContainer");
+
+  expandBtnALink.appendChild(expandBtn);
+
+  reposContainer.appendChild(expandBtnALink);
 }
 
 //GET REPOS
@@ -134,9 +138,7 @@ function createReposContainerHTML(repos: IRepo[]) {
 
   let collapseBtn = document.createElement("button");
   collapseBtn.setAttribute("type", "button");
-  collapseBtn.classList.add("showcasebtn");
   collapseBtn.classList.add("btn", "btn-light");
-  collapseBtn.setAttribute("href", "#projectsContainer");
   collapseBtn.innerHTML = "COLLAPSE";
   collapseBtn.addEventListener("click", createHtmlForGetReposButton);
 
