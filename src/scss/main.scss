@@ -152,44 +152,119 @@ html {
                             align-items:center;
 
                             .repoBox {
-                                // background-image: url("https://angelicareutersward.se/assets/busybee.JPG");
-                                // background-repeat: no-repeat;
-                                // background-size: cover;
-                                width: 90vw;
+                                width: 90%;
 
                                 .repo__link {
                                     text-decoration: none;
                                     cursor: pointer;
                                     
                                     .repo__title {
-                                        //  @include mixins.themeColor;
-                                        // border-radius: 15px;
-                                        // padding-left: 20px;
-                                        // padding-right: 20px;
-                                        // padding-bottom: 2px;
-                                        // color: white;
-
-                                        // color: black;
-                                        //@include mixins.fontThemeColor;
                                         @include mixins.fontContrastColor;
                                         font-family: Damion;
                                         font-size: 1.5rem;
 
                                         .repo__description {
                                             font-family: Playfair Display;
-                                            // @include mixins.contrastColor;
-                                            // color: white;
                                             color: black;
-                                            //color: rgb(255, 191, 211);
-                                            // @include mixins.fontContrastColor;  
-
-                                            // border-radius: 15px;
-                                            // padding-left: 10px;
-                                            // padding-right: 10px;
                                             font-size: .9rem;
                                         }
                                     }
                                 }
+                                .tryItLink, .gitHubLink {
+                                    @include mixins.fontContrastColor;
+                                    cursor: grab;
+                                    margin: 10px;
+                                    text-decoration: none;
+                                    transition: color 1s linear;    
+                                    
+                                    .tryItLink:hover {
+                                        color: #ffbf00;
+                                        opacity: 1;
+                                        animation: 2s infinite skew;
+                                        transform: skew(10deg);                                      
+                                    }
+                                    &:visited {
+                                        text-decoration: none;
+                                    }
+                                }
+
+                                #hiddenGemsImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/hiddenGems/hiddenGems.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin-left: 38px;
+                                    margin-right: 38px;
+                                }
+
+                                #graphqlWebshopImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/graphqlWebshop/graphqlWebshop.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin-left: 38px;
+                                    margin-right: 38px;
+                                  }
+
+                                  #mongodbReviewAppImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/mongodbReviewApp/mongodbReviewApp.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin-left: 38px;
+                                    margin-right: 38px;
+                                  }
+
+                                  #readyDesignImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/readyDesign/readyDesign.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin-left: 47px;
+                                    margin-right: 47px;
+                                  }
+
+                                  #toDoImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/toDo/toDo.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin: -10px 40px 10px;
+                                  }
+
+                                  #vackraMaltiderImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/vackraMaltider/vackraMaltider.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin-top: -20px;
+                                    margin-bottom: 20px;
+                                  }
+
+                                  #testingCodeImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/testingCode/testingCode.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin: -15px 40px 15px;
+                                  }
+
+                                  #portfolioImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/portfolio/portfolio.png");
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    margin: -10px 30px 10px;
+                                  } 
+
                             }
                         }
                     }
@@ -423,6 +498,13 @@ html {
                                     transform: skew(10deg);
                                     opacity: 1;                                }
                             }
+
+                            #readyDesignImg {
+                                margin-left: 30.5px !important;
+                                margin-right: 30.5px !important;
+                              }
+
+
                         }
                     }
                     #aboutContainer {
