@@ -1,13 +1,15 @@
-import axios, { AxiosPromise } from "axios";
-import { IRepo } from "../models/iRepo";
+require("dotenv").config();
+import axios from "axios";
+import { log } from "../helpers/devHelpers";
+import type { IRepo } from "../models/IRepo";
 
-export function getData(): Promise<IRepo[]> {
-  return axios
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+const GITHUB_API_URL: string = process.env.GITHUB_URL;
 
-    .get("https://api.github.com/users/ayngie/repos")
-
-    .then((response) => {
-      console.log(response.data);
-      return response.data;
-    });
+export async function getGitRepos(): Promise<IRepo[]> {
+  const response = await axios.get(GITHUB_API_URL);
+  log(response.data);
+  return response.data;
 }
