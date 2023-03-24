@@ -3,9 +3,7 @@
 ## Short description:
 This is version 2.0 of my portfolio. 
 
-The first version (v.1) was built with only html / css.
-
-This version is built with html/TS/Scss.
+This version is built with html/TS/Scss (while the previous version was built solely on html/css).
 
 ## Techniques used (shields/badges)
 ![Git badge](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white/to/img.png) 
