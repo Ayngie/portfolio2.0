@@ -1,9 +1,10 @@
 @use "mixins";
+@use "variables" as var;
 
 /*-------------------------------------- Mobile first ------------------------------------*/
 html {
     
-    @include mixins.themeColor;  
+    background-color: var.$hot-pink;
     scroll-behavior: smooth;
  
     body {
@@ -24,7 +25,7 @@ html {
                     flex-direction: column;
                     
                     #signature {
-                        font-family: Damion;
+                        font-family: Damion, sans-serif;
                         font-size: 161%;
                     }
                     .container-fluid {
@@ -43,12 +44,12 @@ html {
                     align-items: center;  
                     
                     .FED {
-                        font-family: Playfair Display;
+                        font-family: Playfair Display, sans-serif;
                         font-size: 1.4rem;
                     }
                     .portfolio-text {
                         margin: 1%;
-                        font-family: Playfair Display;
+                        font-family: Playfair Display, sans-serif;
                         font-size: 4rem;
                     }
 
@@ -70,9 +71,9 @@ html {
                         a {
                             text-decoration: none;
 
-                            svg{
-                                // @include mixins.fontContrastColor;  
-                                color: rgb(255, 188, 234);  
+                            //create filter color for SVG image with help of https://codepen.io/sosuke/pen/Pjoqqp
+                            .filter-pink {
+                                filter: invert(18%) sepia(98%) saturate(4492%) hue-rotate(307deg) brightness(87%) contrast(92%);                            
                             }
                         }
                     }
@@ -83,7 +84,7 @@ html {
                         margin-bottom: 7%;
                         width: 100%;
                         text-align: center;
-                        font-family: Playfair Display;
+                        font-family: Playfair Display, sans-serif;
                     }
 
                     #helloContainer, #aboutContainer, #projectsContainer, #contactContainer {
@@ -95,7 +96,7 @@ html {
   
                         }
                         .alive {
-                            color: green;
+                            color: var.$purple;
                             cursor: none; 
                             transition: color 1s;
                         }
@@ -124,7 +125,6 @@ html {
                                 
                                 &:hover {
                                     width: 42% !important;
-                                    transform: rotate(-5deg);
                                     margin: 22.4px;
                                 }
                             }
@@ -159,19 +159,19 @@ html {
                                     cursor: pointer;
                                     
                                     .repo__title {
-                                        @include mixins.fontContrastColor;
-                                        font-family: Damion;
+                                        color: var.$pink-contrast;
+                                        font-family: Damion, sans-serif;
                                         font-size: 1.5rem;
 
                                         .repo__description {
-                                            font-family: Playfair Display;
+                                            font-family: Playfair Display, sans-serif;
                                             color: black;
                                             font-size: .9rem;
                                         }
                                     }
                                 }
                                 .tryItLink, .gitHubLink {
-                                    @include mixins.fontContrastColor;
+                                    color: var.$pink-contrast;
                                     cursor: grab;
                                     margin: 10px;
                                     text-decoration: none;
@@ -188,12 +188,14 @@ html {
                                     }
                                 }
 
-                                #hiddenGemsImg {
-                                    height: 200px;
-                                    background-image: url("https://angelicareutersward.se/assets/hiddenGems/hiddenGems.png");
+                                .repoImages {
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: contain;
+                                }
+                                #hiddenGemsImg {
+                                    height: 200px;
+                                    background-image: url("https://angelicareutersward.se/assets/hiddenGems/hiddenGems.png");
                                     margin-left: 38px;
                                     margin-right: 38px;
                                 }
@@ -201,9 +203,6 @@ html {
                                 #graphqlWebshopImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/graphqlWebshop/graphqlWebshop.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin-left: 38px;
                                     margin-right: 38px;
                                   }
@@ -211,9 +210,6 @@ html {
                                   #mongodbReviewAppImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/mongodbReviewApp/mongodbReviewApp.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin-left: 38px;
                                     margin-right: 38px;
                                   }
@@ -221,9 +217,6 @@ html {
                                   #readyDesignImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/readyDesign/readyDesign.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin-left: 47px;
                                     margin-right: 47px;
                                   }
@@ -231,18 +224,12 @@ html {
                                   #toDoImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/toDo/toDo.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin: -10px 40px 10px;
                                   }
 
                                   #vackraMaltiderImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/vackraMaltider/vackraMaltider.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin-top: -20px;
                                     margin-bottom: 20px;
                                   }
@@ -250,18 +237,12 @@ html {
                                   #testingCodeImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/testingCode/testingCode.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin: -15px 40px 15px;
                                   }
 
                                   #portfolioImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/assets/portfolio/portfolio.png");
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
                                     margin: -10px 30px 10px;
                                   } 
 
@@ -287,24 +268,18 @@ html {
                                 align-items: center;
                                 
                                 #techSkillsComment {
-                                    // margin-top: -10px;
                                     font-style: italic;
                                     font-size: .9rem;
-                                    //@include mixins.fontContrastColor;
                                 }
 
                                 .skillsIconsBox {
                                     margin-bottom: 1rem;
-
                                     display: flex;
                                     flex-direction: row;
                                     justify-content: center;
                                     align-items: center;
                                     flex-wrap: wrap;
-                                    // color: pink;
-                                    // @include mixins.fontThemeColor;  
-                                    @include mixins.fontContrastColor;  
-
+                                    color: var.$pink-contrast;
                                     width: 80%;
                                     gap: 20px;
 
@@ -324,8 +299,7 @@ html {
                                     align-items:center;    
                                     #medieinstitutetURL {
                                         text-decoration: none;
-                                        @include mixins.fontContrastColor;  
-
+                                        color: var.$pink-contrast;
                                     }
                                 }
                             }
@@ -343,10 +317,8 @@ html {
                             #CVBox {
                                 #CVLink {
                                     text-decoration: none;
-                                    @include mixins.fontContrastColor;  
-
+                                    color: var.$pink-contrast;
                                     font-weight: bold;
-
                                     display: inline-block;
                                     animation: skew 5s infinite;
                                     transform: skew(10deg);
@@ -382,9 +354,6 @@ html {
                             justify-content: center;
                             align-items: center;
                             width: 80%;    
-                            // p {
-                            //     width: 100%;
-                            // }
                         }
 
                         #socialsBox {
@@ -394,10 +363,8 @@ html {
                             align-items: center;
                             gap: 25px;
                             padding-left: 0;
-        
-                            li {
-                                list-style: none;
-        
+                            
+                            div {        
                                 a {        
                                     color: black;
                                     text-decoration: none;
@@ -411,7 +378,7 @@ html {
                                         color: black;
                                     }
                                 
-                                    svg {
+                                    .svg {
                                         border-radius: 3px;
                                     }
                                 }      
@@ -424,19 +391,19 @@ html {
 
             footer {
                 display: flex;
-                // flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                font-family: Damion;
-                /* padding: 1%; */
-                //padding-left: 0;
-                // padding-bottom: 3%;
+                font-family: Damion, sans-serif;
 
                 a {
                     text-align: center;
                 }
             }
         }
+    }
+
+    .uppercase {
+        text-transform: uppercase;
     }
 }
 /*-------------------------------------- Desktop ------------------------------------*/
@@ -522,10 +489,6 @@ html {
                     }
 
                     #contactContainer {
-                        #contactContainerJS {
-                            // width: 65%;
-                        }
-
                         #socialsBox {
                             // width: 15%;
                             display: flex;
@@ -534,7 +497,7 @@ html {
                             gap: 15px;
                             
                             .hoverHeart {
-                                li {
+                                div {
                                     display: flex;
                                     flex-direction: row;
                                            
@@ -546,7 +509,7 @@ html {
                                         @include mixins.themeColor;
                                         animation: heart 1.5s infinite;
                                 
-                                        svg {
+                                        .svg {
                                             transform: rotate(-45deg);
                                             translate: 2px;
                                         }
@@ -580,7 +543,7 @@ html {
                                             color: black;
                                         }
                                     
-                                        svg {
+                                        .svg {
                                             border-radius: 3px;
                                         }
                                     }      

@@ -1,5 +1,5 @@
-export function createContactContainerHTML(): void {
-  const contactContainer: HTMLDivElement = document.getElementById("contactContainerJS") as HTMLDivElement;
+export function createHTMLForContactContainer(): void {
+  const contactContainer = document.getElementById("contactContainerJS") as HTMLElement;
 
   const contactsHeading = document.createElement("h4");
   contactsHeading.innerHTML = "Contact";

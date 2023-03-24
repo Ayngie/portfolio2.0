@@ -1,14 +1,14 @@
-import { createHelloContainerHTML } from "./functions/createHelloContainerHTML";
-import { createProjectsContainerHTML } from "./functions/createProjectsContainerHTML";
-import { createGetReposButtonHTML } from "./functions/createGetReposButtonHTML";
-import { createAboutContainerHTML } from "./functions/createAboutContainerHTML";
-import { createContactContainerHTML } from "./functions/createContactContainerHTML";
+import { createHTMLForHelloContainer } from "./functions/helloContainer/createHTMLForHelloContainer";
+import { createHTMLForProjectsContainer } from "./functions/projectsContainer/createHTMLForProjectsContainer";
+import { createHTMLForExpandButton } from "./functions/projectsContainer/createHTMLForExpandButton";
+import { createHTMLForAboutContainer } from "./functions/aboutContainer/createHTMLForAboutContainer";
+import { createHTMLForContactContainer } from "./functions/contactContainer/createHTMLForContactContainer";
 
 function createHTML(): void {
-  createHelloContainerHTML();
-  createProjectsContainerHTML();
-  createGetReposButtonHTML();
-  createAboutContainerHTML();
-  createContactContainerHTML();
+  createHTMLForHelloContainer();
+  createHTMLForProjectsContainer();
+  createHTMLForExpandButton();
+  createHTMLForAboutContainer();
+  createHTMLForContactContainer();
 }
 createHTML();

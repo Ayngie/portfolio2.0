@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assignment 2 in course about Work Methodology for Developers. An exercise in refactoring code from a previous project. In this case a refactorering of my portfolio!"
+    />
+    <title>Angie's Portfolio</title>
+    <!-- Bootstrap - CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap - JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- devicon.dev icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+    <!-- My links -->
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+    <script src="./src/ts/main.ts" defer type="module"></script>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Damion&family=Playfair+Display" />
+  </head>
+  <body>
+    <!-- Bootstrap container -->
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="signature" href="index.html" aria-label="Link to go to the startpage."
+              >Angelica Reuterswärd</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#projectsContainer">Projects</a>
+                <a class="nav-link" href="#aboutContainer">About</a>
+                <a class="nav-link" href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="mainHeading">
+          <div>
+            <div class="FED">
+              <p class="uppercase">Front-end developer</p>
+            </div>
+            <h1 class="portfolio-text uppercase">Portfolio</h1>
+            <div class="heart-container">
+              <div class="heart"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mainContainer">
+          <article class="shadow p-3 mb-5 bg-body rounded" id="helloContainer"></article>
+
+          <article class="arrowUp">
+            <a href="#" aria-label="Link to go to the top of the webpage.">
+              <img src="./src/assets/arrowUp.svg" alt="A circle with an arrow up inside" class="filter-pink" />
+            </a>
+          </article>
+
+          <article id="projectsContainer" class="shadow p-3 mb-5 bg-body rounded">
+            <section id="projectsContainer__heading"></section>
+            <section id="projectsContainer__repos"></section>
+            <section id="projectsContainer__collapseBtn"></section>
+          </article>
+
+          <article class="arrowUp">
+            <a href="#" aria-label="Link to go to the top of the webpage.">
+              <img src="./src/assets/arrowUp.svg" alt="A circle with an arrow up inside" class="filter-pink" />
+            </a>
+          </article>
+
+          <article class="shadow p-3 mb-5 bg-body rounded" id="aboutContainer"></article>
+
+          <article class="arrowUp">
+            <a href="#" aria-label="Link to go to the top of the webpage.">
+              <img src="./src/assets/arrowUp.svg" alt="A circle with an arrow up inside" class="filter-pink" />
+            </a>
+          </article>
+
+          <article id="contactContainer" class="shadow p-3 mb-5 bg-body rounded">
+            <article id="contactContainerJS"></article>
+            <article id="socialsBox">
+              <section class="hoverHeart">
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/angelica-reutersw%C3%A4rd-a4923a1/"
+                    target="_blank"
+                    id="linked-in"
+                    aria-label="Link to go to LinkedIn profile page."
+                  >
+                    <img src="./src/assets/linkedin.svg" alt="LinkedIns logo" class="svg" />
+                  </a>
+                </div>
+              </section>
+              <section class="hoverHeart">
+                <div>
+                  <a href="https://github.com/Ayngie" target="_blank" aria-label="Link to go to github page."
+                    ><img src="./src/assets/github.svg" alt="Githubs logo" class="svg" />
+                  </a>
+                </div>
+              </section>
+              <section class="hoverHeart" id="hoverHeart__mailTo">
+                <div>
+                  <a href="mailto:angelica.reutersward@medieinstitutet.se" aria-label="Link to go send email.">
+                    <img
+                      src="./src/assets/envelope-heart-fill.svg"
+                      alt="An envelope decorated with a filled heart"
+                      class="svg"
+                    />
+                  </a>
+                </div>
+              </section>
+            </article>
+          </article>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <div>
+          <a class="nav-link active" aria-current="page" href="#" aria-label="Link to go to the startpage."
+            >Copyright © 2023 Angelica Reuterswärd, Front-end developer. All Rights Reserved</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
