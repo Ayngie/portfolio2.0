@@ -1,4 +1,4 @@
-export function createCVInfo(CV: HTMLDivElement): void {
+export function createCVInfo(CV: HTMLElement): void {
   CV.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
   CV.id = "CVBox";
 

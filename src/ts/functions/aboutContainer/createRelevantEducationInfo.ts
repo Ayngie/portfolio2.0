@@ -1,4 +1,4 @@
-export function createRelevantEducationInfo(relevantEducation: HTMLDivElement): void {
+export function createRelevantEducationInfo(relevantEducation: HTMLElement): void {
   relevantEducation.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
   relevantEducation.id = "relevantEducationBox";
 

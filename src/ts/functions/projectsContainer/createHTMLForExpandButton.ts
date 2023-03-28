@@ -15,7 +15,7 @@ export function createHTMLForExpandButton(): void {
   btn.setAttribute("aria-label", "Expand");
   btn.classList.add("btn", "btn-light");
   btn.innerHTML = "EXPAND";
-  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises, @typescript-eslint/no-unsafe-argument
   btn.addEventListener("click", getRepos);
 
   link.appendChild(btn);

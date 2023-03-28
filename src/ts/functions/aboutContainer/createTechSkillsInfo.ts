@@ -1,4 +1,4 @@
-export function createTechSkillsInfo(techSkills: HTMLDivElement): void {
+export function createTechSkillsInfo(techSkills: HTMLElement): void {
   techSkills.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
   techSkills.id = "techSkillsBox";
 

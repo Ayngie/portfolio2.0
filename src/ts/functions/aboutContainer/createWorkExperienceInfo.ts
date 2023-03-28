@@ -1,4 +1,4 @@
-export function createWorkExperienceInfo(workExperience: HTMLDivElement): void {
+export function createWorkExperienceInfo(workExperience: HTMLElement): void {
   workExperience.classList.add("shadow-sm", "p-3", "mb-5", "bg-body", "rounded");
   workExperience.id = "workExperienceBox";
 

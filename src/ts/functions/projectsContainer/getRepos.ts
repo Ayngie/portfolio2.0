@@ -1,6 +1,6 @@
 import { gitHubApiRequest } from "../../services/gitHubApiRequest";
 import type { IRepo } from "../../models/IRepo";
-import { createHTMLForGitRepos } from "./createHTMLForGitRepos";
+import { createHTMLForProjects } from "./createHTMLForProjects";
 import { log } from "../../helpers/devHelpers";
 
 export async function getRepos(): Promise<void> {
@@ -10,5 +10,5 @@ export async function getRepos(): Promise<void> {
   // eslint-disable-next-line prefer-const
   repos = await gitHubApiRequest();
   log(repos);
-  createHTMLForGitRepos(repos);
+  createHTMLForProjects(repos);
 }
