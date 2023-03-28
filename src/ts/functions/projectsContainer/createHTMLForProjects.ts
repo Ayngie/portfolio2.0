@@ -40,6 +40,10 @@ export function createHTMLForProjects(repos: IRepo[]): void {
     const tryItLink = document.createElement("a");
     addInfoToTryItLink(tryItLink);
 
+    if (repos[i].html_url === "https://github.com/Ayngie/project_setups") {
+      continue;
+    }
+
     if (
       // eslint-disable-next-line no-constant-condition
       repos[i].html_url === "https://github.com/Ayngie/assignment-API-graphQL_express-HiddenGems" ||
