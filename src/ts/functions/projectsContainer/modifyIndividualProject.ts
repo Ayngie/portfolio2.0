@@ -46,7 +46,7 @@ export function modifyIndividualProject(
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-javascript-ToDo") {
     title.innerHTML = "Todo";
-    description.innerHTML = "A very basic html/scss/JS ToDo app.";
+    description.innerHTML = "An early and very basic html/scss/JS ToDo app.";
     imgLink.href = receivedRepo.html_url;
     backgroundImgContainer.id = "toDoImg";
     gitHubLink.href = receivedRepo.html_url;
