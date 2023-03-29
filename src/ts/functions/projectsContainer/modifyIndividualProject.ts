@@ -19,18 +19,26 @@ export function modifyIndividualProject(
   }
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-API-graphQL_standalone-Webshop") {
-    title.innerHTML = "Webshop API";
+    title.innerHTML = "GraphQL Webshop";
     description.innerHTML = "A graphQL apollo server API for a webshop shoppingcart.";
     imgLink.href = receivedRepo.html_url;
     backgroundImgContainer.id = "graphqlWebshopImg";
     gitHubLink.href = receivedRepo.html_url;
   }
 
-  if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-API-mongoDB_express_Rest-api-ReviewApp") {
-    title.innerHTML = "Review App API";
-    description.innerHTML = "A mongoDB express REST-API for a review app.";
+  if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-API-mongoDB_RestAPI-Webshop") {
+    title.innerHTML = "MongoDb Webshop";
+    description.innerHTML = "A MongoDb Apollo-server REST-API for a webshop shoppingcart.";
     imgLink.href = receivedRepo.html_url;
-    backgroundImgContainer.id = "mongodbReviewAppImg";
+    backgroundImgContainer.id = "mongoDbWebshopImg";
+    gitHubLink.href = receivedRepo.html_url;
+  }
+
+  if (receivedRepo.html_url === "https://github.com/Ayngie/gym-review-site-REST-API") {
+    title.innerHTML = "Gym review App";
+    description.innerHTML = "An SQLite express REST-API.";
+    imgLink.href = receivedRepo.html_url;
+    backgroundImgContainer.id = "gymReviewAppImg";
     gitHubLink.href = receivedRepo.html_url;
   }
 
@@ -54,7 +62,7 @@ export function modifyIndividualProject(
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-typescript-Webshop-VackraMaltiderAB") {
     title.innerHTML = "Vackra M\xe5ltider";
-    description.innerHTML = "An agile group webshop project with html/scss/TS.";
+    description.innerHTML = "An agile webshop project with html/scss/TS.";
     imgLink.href = receivedRepo.html_url;
     backgroundImgContainer.id = "vackraMaltiderImg";
     tryItLink.setAttribute("href", "https://angelicareutersward.se/Webshop/index.html");
