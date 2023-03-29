@@ -33,7 +33,7 @@ This version is built with html/TS/Scss (while the previous version was built so
 ---
 
 ## Screenshot of project:
-![Demonstration of my portfolio](./src/assets/portfolio.jpg?raw=true "Angie's Portfolio")
+![Demonstration of my portfolio](./src/assets/portfolioScreenshot.jpg?raw=true "Angie's Portfolio")
 
 ---
 

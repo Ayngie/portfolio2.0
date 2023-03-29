@@ -44,7 +44,7 @@ export function modifyIndividualProject(
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-html_css-Ready-Design") {
     title.innerHTML = "Ready Design";
-    description.innerHTML = "A 'copycat' website built solely with html/css";
+    description.innerHTML = "A 'copycat' website built solely with html/css.";
     imgLink.href = receivedRepo.html_url;
     backgroundImgContainer.id = "readyDesignImg";
     tryItLink.setAttribute("href", "https://angelicareutersward.se/ReadyDesign/index.html");
