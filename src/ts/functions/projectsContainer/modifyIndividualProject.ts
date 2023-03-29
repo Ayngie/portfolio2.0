@@ -80,7 +80,7 @@ export function modifyIndividualProject(
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/portfolio2.0") {
     title.innerHTML = "My Portfolio";
-    description.innerHTML = "V.2.0 - with html/scss/TS";
+    description.innerHTML = "Vite app with html/scss/TS";
     imgLink.href = receivedRepo.html_url;
     backgroundImgContainer.id = "portfolioImg";
     gitHubLink.href = receivedRepo.html_url;
