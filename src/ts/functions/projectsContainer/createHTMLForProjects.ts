@@ -48,7 +48,8 @@ export function createHTMLForProjects(repos: IRepo[]): void {
       // eslint-disable-next-line no-constant-condition
       repos[i].html_url === "https://github.com/Ayngie/assignment-API-graphQL_express-HiddenGems" ||
       "https://github.com/Ayngie/assignment-API-graphQL_standalone-Webshop" ||
-      "https://github.com/Ayngie/assignment-API-mongoDB_express_Rest-api-ReviewApp" ||
+      "https://github.com/Ayngie/assignment-API-mongoDB_RestAPI-Webshop" ||
+      "https://github.com/Ayngie/gym-review-site-REST-API" ||
       "https://github.com/Ayngie/assignment-html_css-Ready-Design" ||
       "https://github.com/Ayngie/assignment-javascript-ToDo" ||
       "https://github.com/Ayngie/assignment-typescript-Webshop-VackraMaltiderAB" ||
