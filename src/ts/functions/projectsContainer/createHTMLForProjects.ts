@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import type { IRepo } from "../../models/iRepo";
+import type { IRepo } from "../../models/IRepo";
 import { createHTMLForCollapseButton } from "./createHTMLForCollapseButton";
 import { modifyIndividualProject } from "./modifyIndividualProject";
 

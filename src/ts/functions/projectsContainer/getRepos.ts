@@ -1,5 +1,5 @@
 import { gitHubApiRequest } from "../../services/gitHubApiRequest";
-import type { IRepo } from "../../models/iRepo";
+import type { IRepo } from "../../models/IRepo";
 import { createHTMLForProjects } from "./createHTMLForProjects";
 import { log } from "../../helpers/devHelpers";
 

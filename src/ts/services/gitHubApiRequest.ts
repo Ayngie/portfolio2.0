@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { IRepo } from "../models/iRepo";
+import type { IRepo } from "../models/IRepo";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
