@@ -37,8 +37,8 @@ export function createHTMLForProjects(repos: IRepo[]): void {
     const gitHubLink = document.createElement("a");
     addInfoToGitHubLink(gitHubLink);
 
-    const tryItLink = document.createElement("a");
-    addInfoToTryItLink(tryItLink);
+    // const tryItLink = document.createElement("a");
+    // addInfoToTryItLink(tryItLink);
 
     if (repos[i].html_url === "https://github.com/Ayngie/project_setups") {
       continue;
@@ -98,10 +98,10 @@ function addInfoToGitHubLink(gitHubLink: HTMLAnchorElement): HTMLAnchorElement {
   return gitHubLink;
 }
 
-function addInfoToTryItLink(tryItLink: HTMLAnchorElement): HTMLAnchorElement {
-  tryItLink.target = "_blank";
-  tryItLink.innerHTML = "Try it!";
-  tryItLink.classList.add("tryItLink");
-
-  return tryItLink;
-}
+// function addInfoToTryItLink(tryItLink: HTMLAnchorElement): HTMLAnchorElement {
+//  tryItLink.target = "_blank";
+//  tryItLink.innerHTML = "Try it!";
+//  tryItLink.classList.add("tryItLink");
+//
+//  return tryItLink;
+// }
