@@ -47,9 +47,9 @@ export function modifyIndividualProject(
     description.innerHTML = "A 'copycat' website built solely with html/css.";
     // imgLink.href = receivedRepo.html_url;
     // backgroundImgContainer.id = "readyDesignImg";
-    tryItLink.setAttribute("href", "https://angelicareutersward.se/ReadyDesign/index.html");
+    // tryItLink.setAttribute("href", "https://angelicareutersward.se/ReadyDesign/index.html");
     gitHubLink.href = receivedRepo.html_url;
-    rowContainer.appendChild(tryItLink);
+    // rowContainer.appendChild(tryItLink);
   }
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignment-javascript-ToDo") {
@@ -65,9 +65,9 @@ export function modifyIndividualProject(
     description.innerHTML = "An agile webshop project with html/scss/TS.";
     // imgLink.href = receivedRepo.html_url;
     // backgroundImgContainer.id = "vackraMaltiderImg";
-    tryItLink.setAttribute("href", "https://angelicareutersward.se/Webshop/index.html");
+    // tryItLink.setAttribute("href", "https://angelicareutersward.se/Webshop/index.html");
     gitHubLink.href = receivedRepo.html_url;
-    rowContainer.appendChild(tryItLink);
+    // rowContainer.appendChild(tryItLink);
   }
 
   if (receivedRepo.html_url === "https://github.com/Ayngie/assignments-testing") {
