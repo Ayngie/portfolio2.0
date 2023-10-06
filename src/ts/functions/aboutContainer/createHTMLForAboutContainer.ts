@@ -29,9 +29,9 @@ export function createHTMLForAboutContainer(): void {
   subcontainers.appendChild(workExperience);
 
   // CV
-  const CV = document.createElement("article");
-  createCVInfo(CV);
-  subcontainers.appendChild(CV);
+  // const CV = document.createElement("article");
+  // createCVInfo(CV);
+  // subcontainers.appendChild(CV);
 
   /* HTML */
   container.appendChild(heading);
