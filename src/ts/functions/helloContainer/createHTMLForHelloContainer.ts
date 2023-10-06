@@ -14,8 +14,8 @@ export function createHTMLForHelloContainer(): void {
   const textAbovePicture = document.createElement("div");
   createTextAbovePicture(textAbovePicture);
 
-  const profileImgBox = document.createElement("div");
-  createProfileImage(profileImgBox);
+  // const profileImgBox = document.createElement("div");
+  // createProfileImage(profileImgBox);
 
   const textBelowPicture = document.createElement("div");
   createTextBelowPicture(textBelowPicture);
@@ -23,6 +23,6 @@ export function createHTMLForHelloContainer(): void {
   container.appendChild(heading);
   container.appendChild(welcome);
   container.appendChild(textAbovePicture);
-  container.appendChild(profileImgBox);
+  // container.appendChild(profileImgBox);
   container.appendChild(textBelowPicture);
 }
