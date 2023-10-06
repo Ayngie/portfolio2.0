@@ -63,7 +63,7 @@ export function createHTMLForProjects(repos: IRepo[]): void {
         description,
         imgLink,
         backgroundImgContainer,
-        tryItLink,
+        //tryItLink,
         gitHubLink,
         rowContainer
       );
