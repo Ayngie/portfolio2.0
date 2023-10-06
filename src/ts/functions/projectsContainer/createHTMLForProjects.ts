@@ -25,7 +25,7 @@ export function createHTMLForProjects(repos: IRepo[]): void {
     description.classList.add("repo__description");
     description.innerHTML = repos[i].description;
 
-    // const backgroundImgContainer = document.createElement("div");
+    const backgroundImgContainer = document.createElement("div");
     // backgroundImgContainer.classList.add("repoImages");
 
     const rowContainer = document.createElement("div");
@@ -74,7 +74,7 @@ export function createHTMLForProjects(repos: IRepo[]): void {
     rowContainer.appendChild(gitHubLink);
 
     project.appendChild(titleLink);
-    //imgLink.appendChild(backgroundImgContainer);
+    imgLink.appendChild(backgroundImgContainer);
     project.appendChild(imgLink);
     project.appendChild(rowContainer);
 
