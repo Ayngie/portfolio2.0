@@ -11,7 +11,7 @@ export function createTextBelowPicture(textBelowPicture: HTMLDivElement): HTMLEl
     "I've since then advanced in my technical skills, gained knowledge in various frameworks and libraries, and spent two internships at PostNord Group IT learning heaps and developing even more skills. This portfolio however lives on :)";
   const paragraph4 = document.createElement("p");
   paragraph4.innerHTML =
-    "To see my most recent project (showingcasing more advanced skills and techniques), why don't you view my degree project about Gestational Diabetes (you can find it under my projects below)!";
+    "To see my most recent project (showcasing more advanced skills and techniques), why don't you view my degree project about Gestational Diabetes (you can find it under my projects below)!";
 
   textBelowPicture.appendChild(paragraph1);
   textBelowPicture.appendChild(paragraph2);
