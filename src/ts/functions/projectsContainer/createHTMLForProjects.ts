@@ -91,7 +91,7 @@ function addInfoToImageLink(imgLink: HTMLAnchorElement): HTMLAnchorElement {
 }
 
 function addInfoToGitHubLink(gitHubLink: HTMLAnchorElement): HTMLAnchorElement {
-  gitHubLink.innerHTML = "GitHub";
+  gitHubLink.innerHTML = "Click title to view on GitHub";
   gitHubLink.target = "_blank";
   gitHubLink.classList.add("gitHubLink");
 
