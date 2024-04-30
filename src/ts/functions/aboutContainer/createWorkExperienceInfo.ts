@@ -6,7 +6,7 @@ export function createWorkExperienceInfo(workExperience: HTMLElement): void {
   heading.innerHTML = "Work experience";
   const description1 = document.createElement("p");
   description1.innerHTML =
-    "Second frontend internship (LIA 2) at PostNord Group IT. Back in team System Components, this time around I was also able to contribute to team Web Components and to team Access & Login, broadening my tecknical skills and being part of the development of a new PN feature. Amazingly educational and fun times!";
+    "Second frontend internship (LIA 2) at PostNord Group IT. Back in team System Components, this time around I was also able to contribute to team Web Components and to team Access & Login, broadening my technical skills with new frameworks and being part of the development of a new PN feature. Amazingly educational and fun times!";
   const description2 = document.createElement("p");
   description2.innerHTML =
     "First frontend internship (LIA 1) at PostNord Group IT. Getting to convert academical knowledge to practical expertise as well as gain lots of new skills in the highly talented System Components team!";
