@@ -85,4 +85,12 @@ export function modifyIndividualProject(
     // backgroundImgContainer.id = "portfolioImg";
     // gitHubLink.href = receivedRepo.html_url;
   }
+
+    if (receivedRepo.html_url === "https://github.com/Ayngie/Ayngie") {
+    title.innerHTML = "Ayngie";
+    description.innerHTML = "My GitHub profile page";
+    // imgLink.href = receivedRepo.html_url;
+    // backgroundImgContainer.id = "portfolioImg";
+    // gitHubLink.href = receivedRepo.html_url;
+  }
 }
