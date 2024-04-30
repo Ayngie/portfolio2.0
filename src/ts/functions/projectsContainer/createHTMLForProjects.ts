@@ -25,17 +25,17 @@ export function createHTMLForProjects(repos: IRepo[]): void {
     description.classList.add("repo__description");
     description.innerHTML = repos[i].description;
 
-    const backgroundImgContainer = document.createElement("div");
+    // const backgroundImgContainer = document.createElement("div");
     // backgroundImgContainer.classList.add("repoImages");
 
-    const rowContainer = document.createElement("div");
-    rowContainer.classList.add("rowContainer");
+    // const rowContainer = document.createElement("div");
+    // rowContainer.classList.add("rowContainer");
 
-    const imgLink = document.createElement("a");
-    addInfoToImageLink(imgLink);
+    // const imgLink = document.createElement("a");
+    // addInfoToImageLink(imgLink);
 
-    const gitHubLink = document.createElement("a");
-    addInfoToGitHubLink(gitHubLink);
+    // const gitHubLink = document.createElement("a");
+    // addInfoToGitHubLink(gitHubLink);
 
     // const tryItLink = document.createElement("a");
     // addInfoToTryItLink(tryItLink);
@@ -61,42 +61,42 @@ export function createHTMLForProjects(repos: IRepo[]): void {
         receivedRepo,
         title,
         description,
-        imgLink,
-        backgroundImgContainer,
-        //tryItLink,
-        gitHubLink,
-        rowContainer
+        // imgLink,
+        // backgroundImgContainer,
+        // tryItLink,
+        // gitHubLink,
+        // rowContainer
       );
     }
 
     titleLink.appendChild(title);
     title.appendChild(description);
-    rowContainer.appendChild(gitHubLink);
+    //rowContainer.appendChild(gitHubLink);
 
     project.appendChild(titleLink);
-    imgLink.appendChild(backgroundImgContainer);
-    project.appendChild(imgLink);
-    project.appendChild(rowContainer);
+    // imgLink.appendChild(backgroundImgContainer);
+    // project.appendChild(imgLink);
+    // project.appendChild(rowContainer);
 
     container.appendChild(project);
   }
   createHTMLForCollapseButton();
 }
 
-function addInfoToImageLink(imgLink: HTMLAnchorElement): HTMLAnchorElement {
-  imgLink.target = "_blank";
-  imgLink.classList.add("gitHubLink");
+// function addInfoToImageLink(imgLink: HTMLAnchorElement): HTMLAnchorElement {
+  // imgLink.target = "_blank";
+  // imgLink.classList.add("gitHubLink");
 
-  return imgLink;
-}
+  // return imgLink;
+// }
 
-function addInfoToGitHubLink(gitHubLink: HTMLAnchorElement): HTMLAnchorElement {
-  gitHubLink.innerHTML = "Click title to view on GitHub";
-  gitHubLink.target = "_blank";
-  gitHubLink.classList.add("gitHubLink");
+// function addInfoToGitHubLink(gitHubLink: HTMLAnchorElement): HTMLAnchorElement {
+  // gitHubLink.innerHTML = "GitHub";
+  // gitHubLink.target = "_blank";
+  // gitHubLink.classList.add("gitHubLink");
 
-  return gitHubLink;
-}
+  // return gitHubLink;
+// }
 
 // function addInfoToTryItLink(tryItLink: HTMLAnchorElement): HTMLAnchorElement {
 //  tryItLink.target = "_blank";
