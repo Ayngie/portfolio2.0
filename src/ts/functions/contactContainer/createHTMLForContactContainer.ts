@@ -6,7 +6,7 @@ export function createHTMLForContactContainer(): void {
 
   const paragraph1 = document.createElement("p");
   paragraph1.innerHTML =
-    "I am currently looking for an internship for fall of 2023. Feel free to contact me if you have openings!";
+    "Graduating in may of 2024! Feel free to contact me for any job openings!";
 
   const paragraph2 = document.createElement("p");
   paragraph2.innerHTML = "Click an icon to get in touch with me!";
