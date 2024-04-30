@@ -36,13 +36,11 @@ html {
             }
 
             main {
-
                 .mainHeading {
                     display: flex;
                     flex-direction: column;
                     text-align: center; 
-                    align-items: center;  
-                    
+                    align-items: center;                  
                     .FED {
                         font-family: Playfair Display, sans-serif;
                         font-size: 1.4rem;
@@ -52,7 +50,6 @@ html {
                         font-family: Playfair Display, sans-serif;
                         font-size: 4rem;
                     }
-
                     .heart-container {
                         @include mixins.heart;
                     }
@@ -93,14 +90,12 @@ html {
                         }
                         h5 {
                             margin-bottom: 4%;    
-  
                         }
                         .alive {
                             color: var.$purple;
                             cursor: none; 
                             transition: color 1s;
                         }
-                        
                         .alive:hover {
                             color:greenyellow;
                         }
@@ -135,7 +130,6 @@ html {
                     }
 
                     #projectsContainer {
-
                         #projectsContainer__heading {
                             display: flex;
                             flex-direction: column;
@@ -145,15 +139,12 @@ html {
                                 width: 80%;
                             }
                         }
-
                         #projectsContainer__repos {
                             display: flex;
                             flex-direction: column;
                             align-items:center;
-
                             .repoBox {
                                 width: 90%;
-
                                 .repo__link {
                                     text-decoration: none;
                                     cursor: pointer;
@@ -172,11 +163,10 @@ html {
                                 }
                                 .tryItLink, .gitHubLink {
                                     color: var.$pink-contrast;
-                                    cursor: grab;
                                     margin: 10px;
+                                    cursor: grab;
                                     text-decoration: none;
                                     transition: color 1s linear;    
-                                    
                                     .tryItLink:hover {
                                         color: #ffbf00;
                                         opacity: 1;
@@ -187,7 +177,6 @@ html {
                                         text-decoration: none;
                                     }
                                 }
-
                                 .repoImages {
                                     background-position: center;
                                     background-repeat: no-repeat;
@@ -199,61 +188,51 @@ html {
                                     margin-left: 38px;
                                     margin-right: 38px;
                                 }
-
                                 #graphqlWebshopImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/graphqlWebshop/GraphqlWebshop.png");
                                     margin-left: 38px;
                                     margin-right: 38px;
-                                }
-
-                                  #mongoDbWebshopImg {
+                                }                                 
+                                #mongoDbWebshopImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/mongoDbWebshop/MongoDbWebshop.png");
                                     margin-left: 38px;
                                     margin-right: 38px;
-                                  }
-
-
-                                  #gymReviewAppImg {
+                                }
+                                #gymReviewAppImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/gymReviewApp/GymReviewApp.png");
                                     margin-left: 38px;
                                     margin-right: 38px;
-                                  }
-
-                                  #readyDesignImg {
+                                }
+                                #readyDesignImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/readyDesign/ReadyDesign.png");
                                     margin-left: 47px;
                                     margin-right: 47px;
-                                  }
-
-                                  #toDoImg {
+                                }
+                                #toDoImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/toDo/ToDo.png");
                                     margin: -10px 40px 10px;
-                                  }
-
-                                  #vackraMaltiderImg {
+                                }
+                                #vackraMaltiderImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/vackraMaltider/VackraMaltider.png");
                                     margin-top: -20px;
                                     margin-bottom: 20px;
-                                  }
-
-                                  #testingCodeImg {
+                                }
+                                #testingCodeImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/testingCode/TestingCode.png");
                                     margin: -15px 40px 15px;
-                                  }
-
-                                  #portfolioImg {
+                                }
+                                #portfolioImg {
                                     height: 200px;
                                     background-image: url("https://angelicareutersward.se/Images/portfolio/Portfolio.png");
                                     margin: -10px 30px 10px;
-                                  } 
-
+                                } 
                             }
                         }
                     }
@@ -263,12 +242,11 @@ html {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-
                         .aboutBoxes {
                             display: flex;
                             flex-direction: column;
                             gap: 15%;
-
+                            
                             #techSkillsBox {
                                 display: flex;
                                 flex-direction: column;
@@ -279,7 +257,6 @@ html {
                                     font-style: italic;
                                     font-size: .9rem;
                                 }
-
                                 .skillsIconsBox {
                                     margin-bottom: 1rem;
                                     display: flex;
@@ -390,7 +367,6 @@ html {
                                         border-radius: 3px;
                                     }
                                 }      
-        
                             }
                         }
                     }
@@ -409,7 +385,7 @@ html {
             }
         }
     }
-
+    
     .uppercase {
         text-transform: uppercase;
     }
@@ -478,8 +454,6 @@ html {
                                 margin-left: 30.5px !important;
                                 margin-right: 30.5px !important;
                               }
-
-
                         }
                     }
                     #aboutContainer {
@@ -563,5 +537,4 @@ html {
             }
         }
     }
-
 }
