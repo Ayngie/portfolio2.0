@@ -1,8 +1,8 @@
-# My Portfolio v.2.0
+# Portfolio v.2.0
 
 ## Short description:
 
-This is my portfolio! Som info about me as a frontend developer in training (yeay) and a demonstration of some of the techniques learned so far... Stay tuned, because there will be more to come! 
+This is a portfolio that I made during first year of Frontend Developer studies. Som info about me as a frontend developer in training, and a demonstration of some of the early techniques I learned at Medieinstitutet, and some info on my current status.  
 
 This is version 2.0 of my portfolio. 
 This version is built with html/TS/Scss (while the previous version was built solely on html/css).
@@ -32,7 +32,7 @@ This version is built with html/TS/Scss (while the previous version was built so
 
 ---
 
-## Screenshot of project:
+## Past screenshot of project:
 ![Demonstration of my portfolio](./src/assets/portfolioScreenshot.jpg?raw=true "Angie's Portfolio")
 
 ---
