@@ -2,10 +2,10 @@
 
 ## Short description:
 
-This is a portfolio that I made during first year of Frontend Developer studies. Som info about me as a frontend developer in training, and a demonstration of some of the early techniques I learned at Medieinstitutet, and some info on my current status.  
+This is a portfolio that I made during first year of Frontend Developer studies. It showcases info about me as a Frontend Developer, a demonstration of some of the early techniques I learned at Medieinstitutet, and some info on my current status.  
 
 This is version 2.0 of my portfolio. 
-This version is built with html/TS/Scss (while the previous version was built solely on html/css).
+This vanilla JS-version is built with html/TypeScript/SCSS (while the previous version was built solely on html/css).
 
 ## Techniques used (shields/badges)
 ![Git badge](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white/to/img.png) 
