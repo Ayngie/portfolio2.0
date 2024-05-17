@@ -2,7 +2,7 @@
 
 ## Short description:
 
-This is a portfolio that I made during first year of Frontend Developer studies. It showcases info about me as a Frontend Developer, a demonstration of some of the early techniques I learned at Medieinstitutet, and some info on my current status.  
+This is a portfolio that I made during first year of Frontend Developer studies. It provides info about me as a Frontend Developer, showcases a demonstration of some of the early techniques I learned at Medieinstitutet, and some info on my current status.  
 
 This is version 2.0 of my portfolio. 
 This vanilla JS-version is built with html/TypeScript/SCSS (while the previous version was built solely on html/css).
